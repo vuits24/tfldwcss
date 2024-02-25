@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn sử dụng</title>
+    <script src="./sdk/sdk.js"></script>
+    <style>
+        :root{
+            
+            --cw1: 255 255 255; 
+            --cdw1:248 248 248;
+            --cr1:234 67 53;
+            --cb1:16 98 229;
+            --cy11:251 188 5;
+            --cg1:155 206 57;
+            --cdg1:4 60 57;
+            --cgr1:77 79 92;
+            --clgr1:237 238 240;
+
+            --cw2: 255, 255, 255;
+            --cdg2:248, 248, 248;
+            --cr2b:234, 67, 53;
+            --cb2:16, 98, 229;
+            --cy2:251, 188, 5;
+            --cg2:155, 206, 57;
+            --cdg2:4, 60, 57;
+            --cg2:77, 79, 92;
+            --clgr2:237, 238, 240;
+
+            --cw:#FFFFFF;
+            --cdw:#F8F8F8;
+            --cr:#EA4335;
+            --cb:#1062E5;
+            --cy:#FBBC05;
+            --cgr:#4D4F5C;
+            --cg: #9BCE39;
+            --cdg:#043C39;
+            --clgr:#EDEEF0;
+            
+            --sm: 576px;
+            --md: 768px;
+            --lg:992px;
+            --xl:1200px;
+            --xxl:1400px;
+
+            --fs:0.8125rem;  /*13*/
+            --fm:1rem; /*16*/
+            --fl:1.125rem; /*18*/
+            --fxl:1.75rem; /*28*/
+            --fxxl:2.1875rem; /*35*/
+        
+            --gs:0.5rem; /*8*/
+            --gm:1rem; /*16*/
+            --gl:1.5rem; /*24*/
+            --gxl:2rem; /*32*/
+            --gxxl:2.5rem; /*40*/
+            --tp: 300px calc(100% - 420px);
+            --bss:0px 3px 6px #00000029;
+        }
+    </style>
+</head>
+<body>
+    <div class="h60px bgc--cg dF fxdC jcC aiC ovyS posSt t0px">
+        <div class="fsi2rem">General introduction</div></div>
+    <div class="dF maw--lg mxA">
+        <div class="menu w20%">
+           
+        </div>
+        <div class="content fx1 p10px_h3 bgc--cg_h3 c--cw_h3 bdb{1px_dotted_var(--cg)}_tr"></div>
+       </div>
+       <script>
+        function genMenuDoc() {
+            var objHtml = OBJ_CSS.map(obj => {
+            var name = obj.name;
+          
+            var arr = Object.keys(obj.pNames).map( p => {
+                var pObject = obj.pNames[p];
+                //let namesP = typeof pObject.names == "string" ? [pObject.names] : (pObject.names? pObject.names : []);
+               // var nameP = pObject.name || (namesP.join(" <br/> "));
+                var desP = pObject.des || "";
+                //var defaultP = pObject.default || "";
+                //var extsP = pObject.exts || null;
+                var idP = desP.replace(/\s/g, "_");
+                var strP = `<li><a href="#${idP}">${desP}</a></li>`;
+                return strP;
+    
+            });
+            return `<li>
+                <label class="fsi2rem">${name}</label>
+                <ul class="pl1rem">${arr.join("\n")}</ul> </li>`;
+             return str;
+        })
+        return `<ul class="posSt t80px mah{calc(100vh_-_80px)} ovyS">${objHtml.join("\n")}</ul>`;
+        }
+      
+        function genContentDoc() {
+            var objHtml = OBJ_CSS.map(obj => {
+            var name = obj.name;
+          
+            var arr = Object.keys(obj.pNames).map( p => {
+                var pObject = obj.pNames[p];
+                let namesP = typeof pObject.names == "string" ? [pObject.names] : (pObject.names? pObject.names : []);
+                
+                var desP = pObject.des || "";
+                var defaultP = pObject.default || "";
+                var extsP = pObject.exts || null;
+                var idP = desP.replace(/\s/g, "_");
+                var fnContent = () => {
+                    let content = "";
+                    if(defaultP) {
+                        content = `<tr>
+                                <td> ${p} </td>
+                                <td> ${namesP.map(mp => `${mp}:${defaultP};`).join("<br/>")} </td>
+                            </tr>\n`;
+                    }
+                    if(extsP) {
+                        content +=  Object.keys(extsP).map(me => {
+                            let mme = me[0].toUpperCase() + me.slice(1);
+                          return  `<tr>
+                                <td> ${p}${mme} </td>
+                                <td> ${namesP.map(mp => `${mp}:${extsP[me]};`).join("<br/>")} </td>
+                                </tr>`;
+                        }).join("\n");
+                        
+                    }
+                    
+                    
+                    return `<table class="w100%">
+                        <tr> 
+                            <th class="taL"> Class </th>
+                            <th class="taL"> Properties </th>
+                           
+                            </tr>
+                        ${content}
+                        </table>`;
+                }
+               
+               
+               
+                var strP = `<div id="${idP}">
+                        <div>
+                            <div class="cT">_</div>
+                            <h3  class="mt60px">${desP}</h3>
+                            <div>${fnContent()} </div>
+                        </div>
+                    </div>`;
+                return strP;
+    
+            });
+            return `
+           
+            
+            <div>
+                <h2>${name}</h2>
+                <section>
+                  
+                    ${arr.join("\n")}</section>
+                </div>`;
+             return str;
+        })
+        return  ` <div>
+                <h2>General introduction </h2>
+                <div> 
+                    <div> Breakpoint:className[{exp} or --varName or _ or Pseudo]selector </div>
+                    <div>_:space </div>   
+                    <div>--varName: varName css </div>    
+                    <div>exp: Expression </div>   
+                    <div> Pseudo: Pseudo class  </div>
+                    <table class="w100%">
+                        <thead>
+                            <tr>
+                                <th class="taL">Breakpoint prefix</th>
+                            <th class="taL">Minimum width</th>
+                            <th class="taL">CSS</th></tr>
+                        </thead>
+                        <tbody>
+                                <tr><td><code>xs:</code></td><td>575px</td><td><code>@media (max-width: 575px) { ... }</code></td></tr>
+                                <tr><td><code>sm:</code></td><td>576px</td><td><code>@media (min-width: 576px) { ... }</code></td></tr>
+                                <tr><td><code>md:</code></td><td>768px</td><td><code>@media (min-width: 768px) { ... }</code></td></tr>
+                                <tr><td><code>lg:</code></td><td>992px</td><td><code>@media (min-width: 992px) { ... }</code></td></tr>
+                                <tr><td><code>xl:</code></td><td>1200px</td><td><code>@media (min-width: 1200px) { ... }</code></td></tr>
+                                <tr><td><code>2xl:</code></td><td>1400px</td><td><code>@media (min-width: 1400px) { ... }</code></td></tr>
+                                </tbody></table>
+                </div>
+                <div>${ objHtml.join("\n")}</div>
+                </div>`;
+        }
+      
+      
+      
+        addEventListener("DOMContentLoaded", (e) => {
+            
+        document.querySelector(".menu").innerHTML = genMenuDoc();
+        document.querySelector(".content").innerHTML = genContentDoc();
+      });
+      </script>
+</body>
+</html>
