@@ -61,20 +61,32 @@
     </style>
 </head>
 <body>
-    <div class="h60px bgc--cg dF fxdC jcC aiC ovyS posSt t0px">
-        <div class="fsi2rem">General introduction</div></div>
-    <div class="dF maw--lg mxA">
-        <div class="menu w20%">
-           
-        </div>
+     <div class="h60px bgc--cg dF fxdC jcC aiC oflyS posSt t0px">
+        <div class="fns2rem">General introduction</div>
+    </div>
+    <div class="dF mw--lg mxA px1rem">
+        <div class="menu w{clamp(300px_20%_350px)} c--cg_a:target"></div>
         <div class="content fx1 p10px_h3 bgc--cg_h3 c--cw_h3 bdb{1px_dotted_var(--cg)}_tr"></div>
-       </div>
+    </div>
        <script>
        
         addEventListener("DOMContentLoaded", (e) => {
             
         document.querySelector(".menu").innerHTML = __code.genMenuDoc();
         document.querySelector(".content").innerHTML = __code.genContentDoc();
+            setTimeout(() => {
+            if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            const targetElement = document.getElementById(hash);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth", 
+                    block: "start"
+                });
+            }
+        }
+        }, 10);
       });
       </script>
 </body>
