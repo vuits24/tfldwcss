@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hướng dẫn sử dụng</title>
-    <script src="./sdk.js"></script>
+    <script src="./sdk.js#dom"></script>
     <style>
         :root{
             
@@ -70,11 +70,15 @@
     </div>
        <script>
        
-        addEventListener("DOMContentLoaded", (e) => {
-            
-        document.querySelector(".menu").innerHTML = __code.genMenuDoc();
-        document.querySelector(".content").innerHTML = __code.genContentDoc();
+       addEventListener("DOMContentLoaded", (e) => {
+            addEventListener("loaded_tfl_css",() => {
+                document.querySelector(".menu").innerHTML = tfl_css.gen_menu_doc();
+                document.querySelector(".content").innerHTML = tfl_css.gen_content_doc();
+               
+            })  
+      
             setTimeout(() => {
+               
             if (window.location.hash) {
             const hash = window.location.hash.substring(1);
             const targetElement = document.getElementById(hash);
@@ -85,8 +89,9 @@
                     block: "start"
                 });
             }
+           
         }
-        }, 10);
+        }, 100);
       });
       </script>
 </body>
