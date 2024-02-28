@@ -69,13 +69,13 @@
         <div class="content fx1 p10px_h3 bgc--cg_h3 c--cw_h3 bdb{1px_dotted_var(--cg)}_tr"></div>
     </div>
        <script>
-       
-       addEventListener("DOMContentLoaded", (e) => {
-            addEventListener("loaded_tfl_css",() => {
+        addEventListener("loaded_tfl_css",() => {
                 document.querySelector(".menu").innerHTML = tfl_css.gen_menu_doc();
                 document.querySelector(".content").innerHTML = tfl_css.gen_content_doc();
                
             })  
+       addEventListener("DOMContentLoaded", (e) => {
+           
       
             setTimeout(() => {
                
