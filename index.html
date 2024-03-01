@@ -68,16 +68,129 @@
         <div class="menu w{clamp(300px_20%_350px)} c--cg_a:target"></div>
         <div class="content fx1 p10px_h3 bgc--cg_h3 c--cw_h3 bdb{1px_dotted_var(--cg)}_tr"></div>
     </div>
-       <script>
-         addEventListener("DOMContentLoaded", (e) => {
-            addEventListener("loaded_tfl_css",() => {
-                document.querySelector(".menu").innerHTML = tfl_css.execute("genMenuDoc", []);
-                document.querySelector(".content").innerHTML = tfl_css.execute("genContentDoc",[]);
-               
-            })  
-      
+        <script>
+            let script = document.querySelector("script#loadcss");
+                
+       addEventListener("loaded_tfl_css", () => {
+        var objCss = tfl_css;
+        var obx = objCss.execute("genObjCss", []);
+            var createMenu = () => {
+                let liText = "";
+                Object.keys(obx).forEach((k) => {
+                    let txt = obx[k].title;
+                     liText += `<li class="p5px"> <a class="td" href="#${k}"> ${txt}</a> (<code class="cGreen">${k}</code>) </li>`;
+                });
+                return `<ul class="posSt t80px mh{calc(100vh_-_80px)} oflyS bgGreen_li:hover cWhite_li:hover cWhite_li:hover_code">${liText}</ul>`;
+            }
+            var createContent=() => {
+                let cssObj = obx;
+                var objHtml = Object.keys(cssObj).map( p => {
+            var pObject = cssObj[p];
+           
+            let namesP = typeof pObject.names == "string" ? [pObject.names] : (pObject.names? pObject.names : []);
+            
+            var desP = pObject.title || "";
+            var defaultP = pObject.default || "";
+            var extsP = pObject.exts || null;
+            var idP = p;
+            var fnContent = () => {
+                let content = "";
+                if(defaultP) {
+                    content += `<tr>
+                            <td> ${p} </td>
+                            <td> ${namesP.map(mp => `${mp}:${defaultP};`).join("<br/>")} </td>
+                        </tr>\n`;
+                }
+                if(extsP) {
+                    content +=  Object.keys(extsP).map(me => {
+                        let mme = me[0].toUpperCase() + me.slice(1);
+                      return  `<tr>
+                            <td> ${p}${mme} </td>
+                            <td> ${namesP.map(mp => `${mp}:${extsP[me]};`).join("<br/>")} </td>
+                            </tr>`;
+                    }).join("\n");
+                    
+                }
+                
+                
+                return `<table class="mt5px w100%"><tr>  <th class="taL"> Class </th> <th class="taL"> Properties </th></tr> ${content}</table>`;
+            }
+           
+           
+           
+            var strP = `<div id="${p}">
+                    <div>
+                        <div class="cT">_</div>
+
+                        <h3  class="mt60px">${desP}(<code color="cGreen!">${p}</code>)</h3>
+                        <div>
+                            <div class="fw700">Properties</div>
+                            <div class="fnsty{italic} cGreen">${namesP.join("</br>")}</div>
+                            
+                        </div>
+                        ${pObject.des? `
+                            <div class="pb5px">
+                                <div class="fw700">Description</div>
+                            <div class="cOliveDrab">${pObject.des}</div>
+                            </div>
+                            `:``}
+                        
+                        <div>
+                            <div class="fw700">Class Default</div>
+                            ${fnContent()} 
+                            
+                            </div>
+                    </div>
+                </div>`;
+            return strP;
+ 
+        });
+       
+
+   return  ` <div>
+               <h2>General introduction </h2>
+               <div> 
+                    Định dạng chuỗi class css:  < Query Media>:< value>< selector>} <br/>
+                    1. Query Media: xs, sm, md, lg, xl, 2xl <br/>
+                    2. value:  < Mã thuộc tính>< Giá trị Thuộc tính> } <br/>
+                    2.1: Mã thuộc tính: là chữ thường, viết tắt, được quy định ở tài liệu. <br/>
+                    2.2: Giá trị thuộc tính: là bắt đầu tính { là biểu thức}, --biến, số <br/>
+                    3.Selector: Là theo tiêu chuẩn của selector javascript. <br/>
+
+                    Chú ý chung: <br/>
+                    _: Đại diện cho dấu cách. <br/>
+                    --:Đại diện cho một biến <br/>
+                    {...}: Đại diện cho biểu thức <br/>
+                    Để lưu được đấu _ thì thêm _ đăng trước nó: __ => _, _ => Dấu cách. <br/>
+                    <div></div>
+
+                  
+                   <table class="w100%">
+                       <thead>
+                           <tr>
+                               <th class="taL">Breakpoint prefix</th>
+                               <th class="taL">Minimum width</th>
+                               <th class="taL">CSS</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                               <tr><td><code>xs:</code></td><td>575px</td><td><code>@media (max-width: 575px) { ... }</code></td></tr>
+                               <tr><td><code>sm:</code></td><td>576px</td><td><code>@media (min-width: 576px) { ... }</code></td></tr>
+                               <tr><td><code>md:</code></td><td>768px</td><td><code>@media (min-width: 768px) { ... }</code></td></tr>
+                               <tr><td><code>lg:</code></td><td>992px</td><td><code>@media (min-width: 992px) { ... }</code></td></tr>
+                               <tr><td><code>xl:</code></td><td>1200px</td><td><code>@media (min-width: 1200px) { ... }</code></td></tr>
+                               <tr><td><code>2xl:</code></td><td>1400px</td><td><code>@media (min-width: 1400px) { ... }</code></td></tr>
+                       </tbody>
+                   </table>
+               </div>
+               <div>${ objHtml.join("\n")}</div>
+           </div>`;
+            }
+           
             setTimeout(() => {
-               
+                
+                document.querySelector(".menu").innerHTML = createMenu();
+           document.querySelector(".content").innerHTML = createContent();
             if (window.location.hash) {
             const hash = window.location.hash.substring(1);
             const targetElement = document.getElementById(hash);
@@ -91,7 +204,9 @@
            
         }
         }, 100);
-      });
+       })
+
+       
       </script>
 </body>
 </html>
