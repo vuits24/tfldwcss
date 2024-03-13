@@ -31,7 +31,7 @@ Trong HTML:
 x-state:dem="0"
 >
 <button
-x-onclick="dem.val +=1"
+x-onclick="() => dem.val +=1"
 > Tăng dần {{dem}}</button>
 </div>
 ```
