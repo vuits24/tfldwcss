@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hướng dẫn sử dụng</title>
-    <script src="./tjs-core.js"></script>
+    <script src="./sdknextx.js"></script>
    
     <style>
         :root{
@@ -69,26 +69,11 @@
         <div class="menu w{clamp(300px_20%_350px)} c--cg_a:target"></div>
         <div class="content fx1 p10px_h3 bgc--cg_h3 c--cw_h3 bdb{1px_dotted_var(--cg)}_tr"></div>
     </div>
-    <script src="./tjs-css.js"></script>
         <script>
-          
-                
-      
-       function genObjCss() {
-              let d ={};
-           if(!cssObj) return [];
-              Object.keys(cssObj).forEach(p => {
-                  d[p] = {names: cssObj[p].names || [],
-                          title: cssObj[p].title || "",
-                          default: cssObj[p].default || "",
-                          exts: cssObj[p].exts || null,
-                          des: cssObj[p].des || "",
-                          cssText: cssObj[p].cssText || ""
-                  }
-              })
-              return  d;
-             }
-        var obx =genObjCss();
+addEventListener("loaded_tfl_css", () => {
+        var objCss = tfl_css;
+        var obx = objCss.invoker0("genObjCss");
+        
             var createMenu = () => {
                 let liText = "";
                 Object.keys(obx).forEach((k) => {
@@ -219,7 +204,7 @@
            
         }
         }, 100);
-       
+});
 
        
       </script>
