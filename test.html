@@ -76,13 +76,14 @@
       
        function genObjCss() {
               let d ={};
+           if(!cssObj) return [];
               Object.keys(cssObj).forEach(p => {
-                  d[p] = {names: this.cssObj[p].names || [],
-                          title: this.cssObj[p].title || "",
-                          default: this.cssObj[p].default || "",
-                          exts: this.cssObj[p].exts || null,
-                          des: this.cssObj[p].des || "",
-                          cssText: this.cssObj[p].cssText || ""
+                  d[p] = {names: cssObj[p].names || [],
+                          title: cssObj[p].title || "",
+                          default: cssObj[p].default || "",
+                          exts: cssObj[p].exts || null,
+                          des: cssObj[p].des || "",
+                          cssText: cssObj[p].cssText || ""
                   }
               })
               return  d;
