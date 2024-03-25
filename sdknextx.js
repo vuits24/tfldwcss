@@ -582,7 +582,7 @@ async function __wbg_init(input) {
 }
 
 wasm_bindgen = Object.assign(__wbg_init, { initSync }, __exports);
-wasm_bindgen.then(async() => {
+wasm_bindgen().then(async() => {
    window.tfl_css = await new wasm_bindgen.TFLLib();
   tfl_css.invoker0("loadEventDom");
     window.dispatchEvent(new Event("loaded_tfl_css"));
