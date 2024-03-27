@@ -10,11 +10,11 @@ Gần giống với React, vuejs, htmlx,...
 1. Chèn hàm vào nội dung
    {{ Hàm, biểu thức, biến }}
 2. Khai báo thuộct tính trên thẻ
-  + x-tags="Các phần tử nếu chưa từng xuất hiện ở trong tài liệu html trong quá trình viết hàm" ví dụ: x-tags="div,span,p,..."
   + x-script: Bổ sung kịch bản khi các đối tượng trên chưa đáp ứng được
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
- + x-include: Tham chiếu tới tệp module html
+ + x-include: Tham chiếu tới tệp module html VD: x-include="https://abc.com/test.html"
+ + x-params: Khai báo thêm biến đầu vào cho x-include, Ví dụ: x-params="[a,b,c]"
     
 3  Một số hàm cơ bản
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
