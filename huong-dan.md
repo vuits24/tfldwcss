@@ -14,7 +14,6 @@ Gần giống với React, vuejs, htmlx,...
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
  + x-include: Tham chiếu tới tệp module html VD: x-include="https://abc.com/test.html"
- + x-params: Khai báo thêm biến đầu vào cho x-include, Ví dụ: x-params="[a,b,c]"
     
 3  Một số hàm cơ bản
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
