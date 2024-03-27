@@ -13,7 +13,8 @@ Gần giống với React, vuejs, htmlx,...
   + x-tags="Các phần tử nếu chưa từng xuất hiện ở trong tài liệu html trong quá trình viết hàm" ví dụ: x-tags="div,span,p,..."
   + x-script: Bổ sung kịch bản khi các đối tượng trên chưa đáp ứng được
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
-    Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive 
+    Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
+    
 3  Một số hàm cơ bản
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
   +$reactive: Hàm tạo trạng thái cho object VD: var ab = $reactive({a:1,b:2})
