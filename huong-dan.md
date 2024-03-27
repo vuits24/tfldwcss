@@ -14,6 +14,7 @@ Gần giống với React, vuejs, htmlx,...
   + x-script: Bổ sung kịch bản khi các đối tượng trên chưa đáp ứng được
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
+ + x-include: Tham chiếu tới tệp module html
     
 3  Một số hàm cơ bản
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
