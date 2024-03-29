@@ -10,7 +10,7 @@ Gần giống với React, vuejs, htmlx,...
 1. Chèn hàm vào nội dung
    {{ Hàm, biểu thức, biến }}
 2. Khai báo thuộct tính trên thẻ
-  + x-app: Khai báo ứng dụng ví dụ: <body x-app> </body> => Hệ thống sẽ render từ body
+  + **x-app**: Khai báo ứng dụng ví dụ: <div x-app> </body> => Hệ thống sẽ render từ div có thuộc tính x-app
   + x-script: Bổ sung kịch bản khi các đối tượng trên chưa đáp ứng được
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
@@ -38,16 +38,96 @@ Gần giống với React, vuejs, htmlx,...
   + $topMostZIndex: Hàm lấy giá trị index => $topMostZIndex()
   + $FloatingWindow: Hàm để tạo cửa sổ, popup,..
 ## 3. Ví dụ cơ bản
-Trong HTML:
+1. Trong HTML:
 
 ```html
-<div
-x-script="
-const dem = $state(0);
-"
->
-<button
-x-onclick="() => dem.val +=1"
-> Tăng dần {{dem}}</button>
+<div x-app>
+ <div
+ x-script="
+ const dem = $state(0);
+ "
+ >
+ <button
+ x-onclick="() => dem.val +=1"
+ > Tăng dần {{dem}}</button>
+ </div>
+<div>
+```
+
+2. Về **$state** thường áp dụng cho một giá trị nhất định
+   
+ Truy cập giá trị hoặc gán giá trị phải thông qua hàm val,
+
+ Ví dụ: const obj = $state({a:1}); Lấy giá trị: obj.val.a, muốn gán giá trị: obj.val = {a:30}.
+   
+```html
+<div x-app>
+ <div 
+          x-script="
+                    const obj = $state({a:1,b:2});
+                    $derive(() => {
+                    	console.log(a, b);
+                    });
+                    
+                    "
+          >
+       	<input
+                 x-value="()=>obj.val.a"
+                 on:input="e=> obj.val = {...obj.val, a: e.target.value}"
+                 />
+       	<input 
+                
+                 x-value="()=>obj.val.b"
+                 on:input="e=> obj.val = {...obj.val, b: e.target.value}"
+                 />
+       	<div>
+            Kết quả: {{()=> obj.val.a + obj.val.b}}
+       </div>
+      </div>
 </div>
 ```
+3. Về **$reactive**: việc truy cập sẽ đơn giản hơn sử dụng $state. 
+   
+ const obj = $reactive({a:1, b:2}); truy cập các giá trị hay gán giá trị trực tiếp: obj.a = 10, obj.b = 20
+
+```html
+<div x-app>
+ <div 
+          x-script="
+                    const obj = $reactive({a:1, b:2});
+                    "
+          >
+       	<input
+                 x-value="()=>obj.a"
+                 on:change="e=> obj.a = e.target.value"
+                 />
+       	<input 
+                
+                 x-value="()=>obj.b"
+                 on:change="e=> obj.b = e.target.value"
+                 />
+       	<div> Kết quả: {{ ()=> obj.a + obj.b }} </div>
+      </div>
+</div>
+```
+4. **$derive** Hàm có luôn luôn gọi mỗi khi trạng thái thay đổi có thể trả về một giá trị hoặc không.
+   
+<div x-app>
+      <div 
+           x-script="
+                     const obj = $reactive({a:1, b:2});
+                     const d = $derive(()=> obj.a + obj.b);
+                     "
+           >
+        <input
+               x-value="()=>obj.a"
+               on:change="e=> obj.a = e.target.value"
+               />
+        <input 
+
+               x-value="()=>obj.b"
+               on:change="e=> obj.b = e.target.value"
+               />
+        <div> Kết quả: {{ d }} </div>
+      </div>
+    </div>
