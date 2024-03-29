@@ -111,7 +111,8 @@ Gần giống với React, vuejs, htmlx,...
 </div>
 ```
 4. **$derive** Hàm có luôn luôn gọi mỗi khi trạng thái thay đổi có thể trả về một giá trị hoặc không.
-   
+
+```html
 <div x-app>
       <div 
            x-script="
@@ -131,3 +132,4 @@ Gần giống với React, vuejs, htmlx,...
         <div> Kết quả: {{ d }} </div>
       </div>
     </div>
+```
