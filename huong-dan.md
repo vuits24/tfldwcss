@@ -17,7 +17,7 @@ Gần giống với React, vuejs, htmlx,...
     
 3  Một số hàm cơ bản
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
-  +$reactive: Hàm tạo trạng thái cho object VD: var ab = $reactive({a:1,b:2})
+  + $reactive: Hàm tạo trạng thái cho object VD: var ab = $reactive({a:1,b:2})
   + $stateFields: Trạng thái cho stateFields: VD: var f = $stateFields({a:1,b:2})
   + $derive: ý nghĩa gần effects của react luôn gọi lại khi có sự thay đổi của trạng thái có thể trả về kết quả hoặc không. $derive(()=> {.... }
   + $tags: chứa các hàm theo định dạng thẻ: $tags["div"]({Thuộc tính},....); hoặc const {div} = $tags; div({class:"color-red"}, "Màu đỏ") => <div class="color-red"> Màu đỏ</div>
