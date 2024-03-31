@@ -224,4 +224,19 @@ styleElement,
 
 ```
 
+5. **$Await** Hàm tiện ích bổ sung
+ $Await({ value, container = div, Loading: () => "", Error: () => "" }, calback(d)=> d);
++ value: là giá trị xử lý bất đồng bộ
++ Loadding: không bắt buộc là một hàm trả khi đang tải dữ liệu về
++ Error: hàm sẽ trả về dữ liệu khi tải bị lõi
++ calback: là hàm trả kết quả sau tải về và sẽ xử lý render ra màn hình
+
+  Ví dụ:
+```javascript
+ $add(document.body, $Await({value:fetch('https://api.ipify.org?format=json').then(t => t.json())}, (r) => r.ip))
+
+```
+  
+  
+   
  
