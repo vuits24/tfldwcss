@@ -236,7 +236,35 @@ styleElement,
  $add(document.body, $Await({value:fetch('https://api.ipify.org?format=json').then(t => t.json())}, (r) => r.ip))
 
 ```
+
+
+6. **$MessageBoard **
   
+  - Khởi tạo
+
+```javascript
+   const board = new MessageBoard({top,bottom, left,right,backgroundColor:"#333D",fontColor:"white",fadeOutSec:0.3,
+boardClass: "", boardStyleOverrides: {}, messageClass: '', messageStyleOverrides: {}, closerClass: '', closerStyleOverrides: {}})
+```
++ Xác định vị trí hiển thị top left, top right, bottom left, bottom right
+
+- Hiển thị
+
+```javascript
+board.show({message: Nội dung, closer: "❌", durationSec: 3, closed: false })
+
+```
+
++ Nếu thiết đặt closed = true board sẽ đóng lại, có thể đứng từ nơi khác để thiết đặt. 
++ Nếu closer thiết đặt thì sẽ hiển thị đấu "❌" => khi click thì  board sẽ đóng lại, 
++ Nếu thiết đặt durationSec thì sau số giây sẽ tự động đóng lạii
+
+- Xoá khỏi dom
+
+```javascript
+board.remove()
+
+```
   
    
  
