@@ -32,7 +32,7 @@ Gần giống với React, vuejs, htmlx,...
   + $addHtmToElement: Hàm thêm text html tương tự như $add, có cấu trúc dạng $addHtmToElement(dom, kiểu thay thế, textHtml, có lấy thẻ script).
   + $htmlToTjs: Hàm convert txt html sang dạng tjs
   + $domToTjs: Hàm chuyển Dom sang dạng tjs
-  + $define: Hàm định nghĩa thẻ tuỳ chỉnh
+  + $defineElement: Hàm định nghĩa thẻ tuỳ chỉnh
   + $Await: Hàm  thẻ load dữ liệu bất đồng bộ
   + $MessageBoard: class xử lý msg trên màn hình, khởi tạo: const board = new MessageBoard({...thuộc tính})
   + $topMostZIndex: Hàm lấy giá trị index => $topMostZIndex()
@@ -133,3 +133,90 @@ Gần giống với React, vuejs, htmlx,...
       </div>
     </div>
 ```
+
+4. **$defineElement** Hàm định nghĩa thẻ tuỳ chỉnh
+ $defineElement(<Tên thẻ>, element, options);
+
+Trong đó:
+- element: ({$this, attr, mount}) => trả về một element: 
++ $this: trả về mặc định của element được định nghĩa
++ attr thuộc tính của thẻ, để lấy giá trị của thẻ: const className = attr('class') hoặc thiết đặt giá trị mặc định: const className = attr('class', 'red');
++ mount: là hàm khởi tạo có dạng: mount(() => {.... return unmount })
+- options: {mode: 'open'}
+
+  Ví dụ:
+
+```javascript
+   $defineElement("check-box", ({$this, attr, mount}) => {
+  const {div, input, style}=$tags;
+const styleElement = style(`
+  .checkbox-wrapper-2 .ikxBAC {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    position: relative;
+    width: 30px;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC,
+  .checkbox-wrapper-2 .ikxBAC::after {
+    transition: all 100ms ease-out;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+  }
+
+  .checkbox-wrapper-2 input[type=checkbox] {
+    cursor: default;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:hover {
+    background-color: #c9cbcd;
+    transition-duration: 0s;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked {
+    background-color: #6e79d6;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked::after {
+    background-color: #fff;
+    left: 13px;
+  }
+
+  .checkbox-wrapper-2 :focus:not(.focus-visible) {
+    outline: 0;
+  }
+
+  .checkbox-wrapper-2 .ikxBAC:checked:hover {
+    background-color: #535db3;
+  }`);
+return [
+styleElement,
+ div({class:"checkbox-wrapper-2"}, input({type: "checkbox", class: "sc-gJwTLC ikxBAC"}))]
+  })
+
+```
+
+ 
