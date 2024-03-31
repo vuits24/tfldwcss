@@ -243,7 +243,7 @@ styleElement,
   - Khởi tạo
 
 ```javascript
-   const board = new MessageBoard({top,bottom, left,right,backgroundColor:"#333D",fontColor:"white",fadeOutSec:0.3,
+   const board = new $MessageBoard({top,bottom, left,right,backgroundColor:"#333D",fontColor:"white",fadeOutSec:0.3,
 boardClass: "", boardStyleOverrides: {}, messageClass: '', messageStyleOverrides: {}, closerClass: '', closerStyleOverrides: {}})
 ```
 + Xác định vị trí hiển thị top left, top right, bottom left, bottom right
