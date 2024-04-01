@@ -53,7 +53,7 @@
  "
  >
  <button
- x-onclick="() => dem.val +=1"
+ onclick="() => dem.val +=1"
  > Tăng dần {{dem}}</button>
  </div>
 <div>
@@ -77,13 +77,13 @@
                     "
           >
        	<input
-                 x-value="()=>obj.val.a"
-                 on:input="e=> obj.val = {...obj.val, a: e.target.value}"
+                 value="{{()=>obj.val.a}}"
+                 oninput="e=> obj.val = {...obj.val, a: e.target.value}"
                  />
        	<input 
                 
-                 x-value="()=>obj.val.b"
-                 on:input="e=> obj.val = {...obj.val, b: e.target.value}"
+                 value="{{()=>obj.val.b}}"
+                 oninput="e=> obj.val = {...obj.val, b: e.target.value}"
                  />
        	<div>
             Kết quả: {{()=> obj.val.a + obj.val.b}}
@@ -103,13 +103,13 @@
                     "
           >
        	<input
-                 x-value="()=>obj.a"
-                 on:change="e=> obj.a = e.target.value"
+                 value="{{()=>obj.a}}"
+                 onchange="e=> obj.a = e.target.value"
                  />
        	<input 
                 
-                 x-value="()=>obj.b"
-                 on:change="e=> obj.b = e.target.value"
+                 value="{{()=>obj.b}}"
+                 onchange="e=> obj.b = e.target.value"
                  />
        	<div> Kết quả: {{ ()=> obj.a + obj.b }} </div>
       </div>
@@ -126,13 +126,13 @@
                      "
            >
         <input
-               x-value="()=>obj.a"
-               on:change="e=> obj.a = e.target.value"
+               value="{{()=>obj.a}}"
+               onchange="e=> obj.a = e.target.value"
                />
         <input 
 
-               x-value="()=>obj.b"
-               on:change="e=> obj.b = e.target.value"
+               value="{{()=>obj.b}}"
+               onchange="e=> obj.b = e.target.value"
                />
         <div> Kết quả: {{ d }} </div>
       </div>
