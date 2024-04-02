@@ -267,6 +267,7 @@ board.remove()
 ```
 
 7. **Hàm List  duyệt danh sách**
+ 
  7.1: **x-list**: Thuộc tính duyệt danh sách
 
  Cấu trúc: x-list="v, deleter, k in ls"
@@ -313,4 +314,11 @@ $add(document.body,
 
 
 ```
- 
+
+8. x-include Thuộc tính load tệp html từ nguồn khác
+
+   **Cấu trúc**: x-include="url" hoặc x-include="{{()=>Biến}}"
+
+```html
+ <div x-include="https://....."> </div>
+```
