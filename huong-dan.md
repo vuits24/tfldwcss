@@ -266,23 +266,51 @@ board.remove()
 
 ```
 
-7. $x-list Hàm duyệt danh sách
+7. **Hàm List  duyệt danh sách**
+ 7.1: **x-list**: Thuộc tính duyệt danh sách
 
-
+ Cấu trúc: x-list="v, deleter, k in ls"
+  + v: Giá trị của phần tử dạng $state
+  + deleter: Hàm xoá
+  + k: là key của mảng
+  + in là từ khoá
+  + ls là Danh sách thiết đặt trạng thái $reactive
+    
 ```html
-<div x-app>
- <div 
-     x-script="
-                    const ls = $reactive([{a:1, b:2},{a:1, b:2},{a:1, b:2},{a:1, b:2}]);
-                    " >
-      
- <div x-list="v, deleter, k in ls"> 
-    <div class="dF">
-      <div>{{v}}</div><button class="" onclick="()=>deleter(k)">Delete</button>
-    </div> 
+ <div x-app>
+  <div 
+      x-script="
+                     const ls = $reactive([{a:1, b:2},{a:1, b:2},{a:1, b:2},{a:1, b:2}]);
+                     " >
+       
+  <div x-list="v, deleter, k in ls"> 
+     <div class="dF">
+       <div>{{v}}</div><button class="" onclick="()=>deleter(k)">Delete</button>
+     </div> 
+   </div>
   </div>
  </div>
-</div>
 ```
-   
+
+7.2: **$list** Hàm duyệt sách sách
+
+ Cấu trúc: **$list**(container, ls, (v, deleter, k) => Element) => Element 
+ Trong đó:
+  + v: Giá trị của phần tử dạng $state
+  + deleter: Hàm xoá
+  + k: là key của mảng
+  + in là từ khoá
+  + ls là Danh sách thiết đặt trạng thái $reactive
+
+
+```javascript
+$add(document.body,
+ () => {
+  const {ul, li} = $tags;
+  const ls = $reactive([1, 2, 3])
+  return $list(ul, ls, v => li(v))
+ });
+
+
+```
  
