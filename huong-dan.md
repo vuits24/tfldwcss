@@ -265,6 +265,24 @@ board.show({message: Nội dung, closer: "❌", durationSec: 3, closed: false })
 board.remove()
 
 ```
-  
+
+7. $x-list Hàm duyệt danh sách
+
+
+```html
+<div x-app>
+ <div 
+     x-script="
+                    const ls = $reactive([{a:1, b:2},{a:1, b:2},{a:1, b:2},{a:1, b:2}]);
+                    " >
+      
+ <div x-list="v, deleter, k in ls"> 
+    <div class="dF">
+      <div>{{v}}</div><button class="" onclick="()=>deleter(k)">Delete</button>
+    </div> 
+  </div>
+ </div>
+</div>
+```
    
  
