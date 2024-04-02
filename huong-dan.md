@@ -315,7 +315,7 @@ $add(document.body,
 
 ```
 
-8. x-include Thuộc tính load tệp html từ nguồn khác
+8. **x-include** Thuộc tính load tệp html từ nguồn khác
 
    **Cấu trúc**: x-include="url" hoặc x-include="{{()=>Biến}}"
 
