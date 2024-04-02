@@ -266,16 +266,17 @@ board.remove()
 
 ```
 
+
 7. **Hàm List  duyệt danh sách**
  
- 7.1: **x-list**: Thuộc tính duyệt danh sách
-
- Cấu trúc: x-list="v, deleter, k in ls"
-  + v: Giá trị của phần tử dạng $state
-  + deleter: Hàm xoá
-  + k: là key của mảng
-  + in là từ khoá
-  + ls là Danh sách thiết đặt trạng thái $reactive
+  7.1: **x-list**: Thuộc tính duyệt danh sách
+ 
+  Cấu trúc: x-list="v, deleter, k in ls"
+   + v: Giá trị của phần tử dạng $state
+   + deleter: Hàm xoá
+   + k: là key của mảng
+   + in là từ khoá
+   + ls là Danh sách thiết đặt trạng thái $reactive
     
 ```html
  <div x-app>
