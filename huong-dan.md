@@ -22,6 +22,8 @@
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
  + x-include: Tham chiếu tới tệp module html VD: x-include="https://abc.com/test.html"
+ + on<sự kiện>: Là một function
+ + this<Tên biến>: Là một hàm trả về một giá trị
     
 **4.  Một số hàm cơ bản**
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
