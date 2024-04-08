@@ -385,8 +385,8 @@ const closed = $state(false);
 ```javascript
   $add(document.body, $FloatingWindow(
     {title: "tiêu đề", disableMove: true},
-    div({style: "display: flex; justify-content: center;"},
-      p("Nội dung được thiết kế tại đây"),
+    $tags["div"]({style: "display: flex; justify-content: center;"},
+      $tags["p"]("Nội dung được thiết kế tại đây"),
     ),
   ))
 
