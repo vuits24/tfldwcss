@@ -44,6 +44,7 @@
   + $MessageBoard: class xử lý msg trên màn hình, khởi tạo: const board = new MessageBoard({...thuộc tính})
   + $topMostZIndex: Hàm lấy giá trị index => $topMostZIndex()
   + $FloatingWindow: Hàm để tạo cửa sổ, popup,..
+
 ## 3. Ví dụ cơ bản
 1. Trong HTML:
 
@@ -325,3 +326,70 @@ $add(document.body,
 ```html
  <div x-include="https://....."> </div>
 ```
+
+
+9. **$FloatingWindow** Cửa sổ window
+
+    Cấu trúc: FloatingWindow({...props}, ...children) => Tạo ra cửa sổ
+
+   Trong đó:
+  -  props:
+  ```TypeScript
+  {
+  title:ChildDom,
+  closed:State<boolean>,
+  x:number | State<number>|100(px),
+  y:number | State<number>|100(px),
+  width:number | State<number>|300(px),
+  height:number | State<number>|200(px),
+  closeCross: ChildDom|"×",
+  customStacking:boolean|false,
+  zIndex:number | State<number>,
+  disableMove:boolean|false,
+  disableResize:boolean|false,
+  headerColor:string|"lightgray",
+  windowClass:string|"",
+  headerClass:string|"",
+  childrenContainerClass:string|"",
+  crossClass:string|"",
+  crossHoverClass:string|"",
+  windowStyleOverrides:RecordStyle<string, string | number>|{},
+  headerStyleOverrides:RecordStyle<string, string | number>|{},
+  childrenContainerClass:RecordStyle<string, string | number>|{},
+  childrenContainerStyleOverrides:RecordStyle<string, string | number>|{},
+  crossStyleOverrides:RecordStyle<string, string | number>|{},
+ crossStyleOverrides:RecordStyle<string, string | number>|{}
+ }
+```
+ ++  Ví dụ: RecordStyle
+
+```json
+{
+  "z-index": 1000,
+  "border-radius": "0.2rem",
+  "padding": "0.8rem",
+  "background-color": "yellow",
+}
+
+```
+
+++ Ví dụ State< number >,  State< boolean >
+ ```javascript
+const zIndex = $state(1);
+const closed = $state(false);
+```
+- children: là ChildDom
+
+  Ví dụ cụ thể
+
+```javascript
+  $add(document.body, $FloatingWindow(
+    {title: "tiêu đề", disableMove: true},
+    div({style: "display: flex; justify-content: center;"},
+      p("Nội dung được thiết kế tại đây"),
+    ),
+  ))
+
+```
+ 
+  
