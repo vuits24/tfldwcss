@@ -56,7 +56,7 @@
  "
  >
  <button
- onclick="() => dem.val +=1"
+ onclick="{{() => dem.val +=1}}"
  > Tăng dần {{dem}}</button>
  </div>
 <div>
@@ -81,12 +81,12 @@
           >
        	<input
                  value="{{()=>obj.val.a}}"
-                 oninput="e=> obj.val = {...obj.val, a: e.target.value}"
+                 oninput="{{e=> obj.val = {...obj.val, a: e.target.value}}}"
                  />
        	<input 
                 
                  value="{{()=>obj.val.b}}"
-                 oninput="e=> obj.val = {...obj.val, b: e.target.value}"
+                 oninput="{{e=> obj.val = {...obj.val, b: e.target.value}}}"
                  />
        	<div>
             Kết quả: {{()=> obj.val.a + obj.val.b}}
@@ -107,12 +107,12 @@
           >
        	<input
                  value="{{()=>obj.a}}"
-                 onchange="e=> obj.a = e.target.value"
+                 onchange="{{e=> obj.a = e.target.value}}"
                  />
        	<input 
                 
                  value="{{()=>obj.b}}"
-                 onchange="e=> obj.b = e.target.value"
+                 onchange="{{e=> obj.b = e.target.value}}"
                  />
        	<div> Kết quả: {{ ()=> obj.a + obj.b }} </div>
       </div>
@@ -130,12 +130,12 @@
            >
         <input
                value="{{()=>obj.a}}"
-               onchange="e=> obj.a = e.target.value"
+               onchange="{{e=> obj.a = e.target.value}}"
                />
         <input 
 
                value="{{()=>obj.b}}"
-               onchange="e=> obj.b = e.target.value"
+               onchange="{{e=> obj.b = e.target.value}}"
                />
         <div> Kết quả: {{ d }} </div>
       </div>
@@ -290,7 +290,7 @@ board.remove()
        
   <div x-list="v, deleter, k in ls"> 
      <div class="dF">
-       <div>{{v}}</div><button class="" onclick="()=>deleter(k)">Delete</button>
+       <div>{{v}}</div><button class="" onclick="{{()=>deleter(k)}}">Delete</button>
      </div> 
    </div>
   </div>
