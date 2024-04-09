@@ -10,7 +10,7 @@
 **1. Truyền tham số vào thuộc tính**
 
    {{ Hàm, biểu thức, biến }}
-   Ví dụ: class="{{()=>className}}"
+   Ví dụ: class="{{()=>className}}" hoặc onclick="{{()=>data.val+=1}}"
    
 **2. Truyền tham số vào nội dung**
 
@@ -22,8 +22,8 @@
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
  + x-include: Tham chiếu tới tệp module html VD: x-include="https://abc.com/test.html"
- + on<sự kiện>: Là một function
- + this<Tên biến>: Là một hàm trả về một giá trị
+ + on<sự kiện>: Sự kiện
+ + this<Tên biến>: Thiết lặp thuộc tính <Tên biến> get cho Element.
     
 **4.  Một số hàm cơ bản**
   + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
