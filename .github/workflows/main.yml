@@ -1,0 +1,20 @@
+on: push
+name:  Deploy website on push
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v4
+
+    - name: FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: 109.123.232.134
+        username: user1
+        password: ${{ secrets.password }}
+        protocol: ftps
+        port: 22
+        local_path: ./*
+        remote_path: /home/test
