@@ -13,8 +13,9 @@ jobs:
       with:
         server: 109.123.232.134
         username: user1
-        password: ${{ secrets.password }}
+        password: ${{ secrets.PASSWORD }}
         protocol: ftps
         port: 22
         local_path: ./*
         remote_path: /home/test
+        args: "-o ConnectTimeout=5"
