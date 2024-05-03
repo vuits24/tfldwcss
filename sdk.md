@@ -58,19 +58,67 @@ Giải thích mã code:
 
 ## I. Tài khoản
 ### 1. Đăng nhập
-            - Host:
-            - Method: POST
-            - Body: {id: '', payLoad: object, }
-            - Response: {result: bool, data: object, code: number, message: string}
+#### 1.1. Đăng nhập theo tên đăng nhập
+   Cấu trúc: $http.account.login(obj,cb);
+
+#### 1.2. Đăng nhập bằng thiết  bị mobile (qrcode)
+##### 1.2.1 Kiểm tra thông tin theo qrcode
+    Cấu trúc: $http.checkQrcode.login(obj,cb);
+
+##### 1.2.2 Đăng nhập
+    Cấu trúc: $http.account.loginQrcode(obj,cb);
 
 
-### 2. Đăng ký thông tin
+### 2. Lấy thông tin qrcode để login
 
-### 3. Xác nhận đăng ký
+    Cấu trúc: $http.account.generateQrcode(obj,cb);
 
-### 4. Đăng nhập thông qua QRcode mobile
+### 3. Đăng ký
 
-### 5. Đăng 
+#### 3.1. Gửi thông tin đăng ký
+
+    Cấu trúc: $http.account.register(obj,cb);
+
+#### 3.2. Gửi lại mã xác thực
+
+    Cấu trúc: $http.account.resendCode(obj,cb);
+
+
+
+#### 3.3. Xác thực đăng ký
+
+    Cấu trúc: $http.account.verifyCode(obj,cb);
+
+
+
+### 4. Lấy thông tin user
+
+    Cấu trúc: $http.account.profile(obj,cb);
+
+### 5. Đổi mật khẩu
+
+    Cấu trúc: $http.account.changePassword(obj,cb);
+
+### 6. Cập nhật thông tin cá nhân
+
+    Cấu trúc: $http.account.updateProfile(obj,cb);
+
+
+### 7. Quên mật khẩu
+
+    Cấu trúc: $http.account.forgotPassword(obj,cb);
+
+
+### 8. Thiết lập mật khẩu mới
+
+    Cấu trúc: $http.account.setNewPassword(obj,cb);
+
+
+
+### 9. Đăng xuất
+
+    Cấu trúc: $http.account.logout(cb);
+
 ## II. Tổ chức
 
    ### 1.Thêm và cập nhật tổ chức
