@@ -17,4 +17,5 @@ jobs:
         protocol: ftp
         port: 22
         timeout: 6000
+        security: loose
         dry-run: true
