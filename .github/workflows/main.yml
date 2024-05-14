@@ -16,3 +16,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         protocol: ftps
         port: 22
+        dry-run: true
