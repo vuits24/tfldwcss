@@ -14,7 +14,7 @@ jobs:
         server: 109.123.232.134
         username: user1
         password: ${{ secrets.PASSWORD }}
-        protocol: ftps-legacy
+        protocol: ftps
         port: 2222
         timeout: 6000
         server-dir: a/
