@@ -15,7 +15,8 @@ jobs:
         username: user1
         password: ${{ secrets.PASSWORD }}
         protocol: ftps-legacy
-        port: 22
+        port: 2222
         timeout: 6000
+        server-dir: ./a
         security: loose
         dry-run: true
