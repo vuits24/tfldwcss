@@ -9,14 +9,16 @@ jobs:
       uses: actions/checkout@v4
 
     - name: FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: sand4rt/ftp-deployer@v1.4
       with:
-        server: 109.123.232.134
+        sftp: true
+        host: 109.123.232.134
+        port: 2222
         username: user1
         password: ${{ secrets.PASSWORD }}
-        protocol: ftps
-        port: 2222
-        timeout: 6000
-        server-dir: a/
-        security: loose
-        dry-run: true
+        remote_folder: 'a/'
+        local_folder: '.'
+        cleanup: false
+        include: '[ "*", "**/*" ]'
+        exclude: '["node_modules/**", ".git/**", "*.env"]'
+        pasive: true
