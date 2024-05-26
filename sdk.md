@@ -59,11 +59,19 @@ Giải thích mã code:
 ## I. Tài khoản
 ### 1. Đăng nhập
 #### 1.1. Đăng nhập theo tên đăng nhập
-   Cấu trúc: $http.account.login(obj,cb);
+    Cấu trúc: $http.account.login(obj,cb);
+   
+    Tham số obj: 
+```TypeScript
+    {username: string, password: string}
+
+```
+    username: Mã vùng + Số điện thoại
 
 #### 1.2. Đăng nhập bằng thiết  bị mobile (qrcode)
 ##### 1.2.1 Kiểm tra thông tin theo qrcode
     Cấu trúc: $http.checkQrcode.login(obj,cb);
+   
 
 ##### 1.2.2 Đăng nhập
     Cấu trúc: $http.account.loginQrcode(obj,cb);
@@ -78,6 +86,17 @@ Giải thích mã code:
 #### 3.1. Gửi thông tin đăng ký
 
     Cấu trúc: $http.account.register(obj,cb);
+    Tham số obj:
+
+```TypeScript
+    {
+        area_code: string,
+        phone_number: string,
+        fullname: string,
+        password: string
+    
+    }
+```    
 
 #### 3.2. Gửi lại mã xác thực
 
@@ -88,6 +107,15 @@ Giải thích mã code:
 #### 3.3. Xác thực đăng ký
 
     Cấu trúc: $http.account.verifyCode(obj,cb);
+    Tham số Xác thực
+
+ ```TypeScript
+    {
+        id: string,
+        code: string
+    
+    }
+```     
 
 
 
