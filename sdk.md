@@ -149,17 +149,27 @@ Giải thích mã code:
 
 ## II. Tổ chức
 
-   ### 1.Thêm và cập nhật tổ chức
-   Cấu trúc: $http.business.createOrUpdate(obj,cb);
+   ### 1.Tạo mới tổ chức
+   Cấu trúc: $http.business.create(obj,cb);
    
-  obj = {id: String, ....các thông tin tên trường khác}, cb: là hàm trả về
+  obj = {...}, cb: là hàm trả về
   
   ** Ví dụ: **
    
 ```javascript
-    $http.business.createOrUpdate({id: "abc1", name: "Tên doanh nghiệp"}, console.log);
+    $http.business.create({name: "Tên doanh nghiệp"}, console.log);
 ```
-  ### 2. Hàm lấy danh sách
+### 2. Hàm cập nhật, (bổ sung thông tin)
+    Cấu trúc: $http.business.update(id, obj,cb);
+   
+  obj = {...}, cb: là hàm trả về
+  ** Ví dụ: **
+   
+```javascript
+    $http.business.update("12345", {mst: "0988777883"}, console.log);
+```
+    
+### 3. Hàm lấy danh sách
 
     Cấu trúc: $http.business.list(objFilter, cb);
     
@@ -171,15 +181,15 @@ Giải thích mã code:
       $http.business.list({}, console);
 ```
 
-   ### 3. Hàm lấy thông tin theo mã số thuế
+   ### 4. Hàm lấy thông tin theo mã số thuế
       
       Cấu trúc: $http.business.taxCode(taxString:String, cb:Function);
-   ### 4. Hàm lấy danh sách ngân hàng
+   ### 5. Hàm lấy danh sách ngân hàng
       
       Cấu trúc: $http.business.banks(cb:Function);
 
 
-  ### 5. Hàm lấy Danh sách địa chỉ tình thành, quận/huyện, phường/xã.
+  ### 6. Hàm lấy Danh sách địa chỉ tình thành, quận/huyện, phường/xã.
 
     Cấu trúc: $http.cates.address_list(objFilter, cb);
 
@@ -193,11 +203,11 @@ Giải thích mã code:
  ```
 
 
- ### 6. Hàm gợi ý địa chỉ
+ ### 7. Hàm gợi ý địa chỉ
 
  Cấu trúc: $http.cates.geo_address({address: String}, cb);
 
- ### 7. Hàm lấy tọa độ theo mã token địa chỉ
+ ### 8. Hàm lấy tọa độ theo mã token địa chỉ
   Cấu trúc: $http.cates.geo_detail({place_id: String}, cb);
  
     
