@@ -77,7 +77,7 @@ Giải thích mã code:
     Cấu trúc: $http.account.loginQrcode(obj,cb);
 
 
-### 2. Lấy thông tin qrcode để login
+### 2. Lấy thông tin qrcode để login (chua test)
 
     Cấu trúc: $http.account.generateQrcode(obj,cb);
 
@@ -98,7 +98,7 @@ Giải thích mã code:
     }
 ```    
 
-#### 3.2. Gửi lại mã xác thực
+#### 3.2. Gửi lại mã xác thực  (chua test)
 
     Cấu trúc: $http.account.resendCode(obj,cb);
 
@@ -121,23 +121,31 @@ Giải thích mã code:
 
 ### 4. Lấy thông tin user
 
-    Cấu trúc: $http.account.profile(obj,cb);
+    Cấu trúc: $http.account.profile(cb);
+    
 
-### 5. Đổi mật khẩu
+### 5. Đổi mật khẩu  (chua test)
 
     Cấu trúc: $http.account.changePassword(obj,cb);
 
-### 6. Cập nhật thông tin cá nhân
+### 6. Cập nhật thông tin cá nhân 
 
     Cấu trúc: $http.account.updateProfile(obj,cb);
 
+```TypeScript
+    {
+        address: string, birthday: string (yyyy-mm-dd), gender: 0|1|2, avatar: string
+    }
+```
+    
 
-### 7. Quên mật khẩu
+
+### 7. Quên mật khẩu  (chua test)
 
     Cấu trúc: $http.account.forgotPassword(obj,cb);
 
 
-### 8. Thiết lập mật khẩu mới
+### 8. Thiết lập mật khẩu mới  (chua test)
 
     Cấu trúc: $http.account.setNewPassword(obj,cb);
 
