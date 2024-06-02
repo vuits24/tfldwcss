@@ -217,6 +217,42 @@ Giải thích mã code:
 
  ### 8. Hàm lấy tọa độ theo mã token địa chỉ
   Cấu trúc: $http.cates.geo_detail({place_id: String}, cb);
- 
+
+### 9. Docs
+#### 9.1. Thêm mới
+    Cấu trúc: $http.business.docs.create(gid: string, type: string, data: object, callback)
+
+Trong đó:
+gid: Mã tổ chức
+type: Phân loại chức năng ví dụ: phong-ban
+data: Thông tin bổ sung cho Chức năng đó
+
+Ví dụ:
+```javascript
+    $http.business.docs.create("tochuc123', "phong-ban", {name: 'Khối Tài chính"}, console.log)
+```
+
+
+ #### 9.2. Cập nhật
+    Cấu trúc: $http.business.docs.update(id: string, data: object, callback)
+Ví dụ:
+```javascript
+    $http.business.docs.update("abce', {name: 'Khối Tài chính"}, console.log)
+```
     
+
+ #### 9.3. Xóa
+    Cấu trúc: $http.business.docs.delete(id: string,callback)
+
+Ví dụ:
+```javascript
+   $http.business.docs.delete("abcef-agdd",console.log)
+
+ ```
+
+ #### 9.4. Danh sách
+
+    Cấu trúc: $http.business.docs.list(objFilter, cb);
+
+    Tương tự như: Tổ chức danh sách
     
