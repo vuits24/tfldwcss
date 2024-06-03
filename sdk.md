@@ -234,25 +234,25 @@ Ví dụ:
 
 
  #### 9.2. Cập nhật
-    Cấu trúc: $http.business.docs.update(id: string, data: object, callback)
+    Cấu trúc: $http.business.docs.update(gid: String, id: string, data: object, callback)
 Ví dụ:
 ```javascript
-    $http.business.docs.update("abce', {name: 'Khối Tài chính"}, console.log)
+    $http.business.docs.update("gabc","abce', {name: 'Khối Tài chính"}, console.log)
 ```
     
 
  #### 9.3. Xóa
-    Cấu trúc: $http.business.docs.delete(id: string,callback)
+    Cấu trúc: $http.business.docs.delete(gid:String, id: string,callback)
 
 Ví dụ:
 ```javascript
-   $http.business.docs.delete("abcef-agdd",console.log)
+   $http.business.docs.delete("gabc", "abcef-agdd", console.log)
 
  ```
 
  #### 9.4. Danh sách
 
-    Cấu trúc: $http.business.docs.list(objFilter, cb);
+    Cấu trúc: $http.business.docs.list(gid: String, objFilter, cb);
 
     Tương tự như: Tổ chức danh sách
     
