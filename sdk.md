@@ -97,27 +97,49 @@ Giải thích mã code:
     
     }
 ```    
+    Trả về
+
+```TypeScript
+{result: boolean, code: Number, data: String}
+```
+
+Trong đó: 
+    - data là giá trị cho tham số **id** của mục **3.2. Gửi lại mã xác thực** 
+    - data là giá trị cho tham số **id** của mục **3.3. Xác thực đăng ký**
 
 #### 3.2. Gửi lại mã xác thực  (chua test)
 
     Cấu trúc: $http.account.resendCode(obj,cb);
 
+```TypeScript
+{
+    id: String
+}
+```
 
+Trả về: 
+```Typescript
+    {result: boolean, code: Number, data: String}
+```
+Trong đó: 
+- data là giá trị cho tham số **id**  cho mục **3.3. Xác thực đăng ký**
+- data là giá trị cho tham số **id**  cho mục **3.2. Gửi lại mã xác thực**
 
 #### 3.3. Xác thực đăng ký
 
     Cấu trúc: $http.account.verifyCode(obj,cb);
     Tham số Xác thực
-
  ```TypeScript
     {
         id: string,
         code: string
     
     }
-```     
+```  
+Trong đó:
+- id: lấy giá trị từ data kết quả trả về của mục  **3.1**  hoặc **3.2**
 
-
+Kết quả khi xác thực thành công, hệ thống sẽ tự động login.
 
 ### 4. Lấy thông tin user
 
@@ -125,8 +147,19 @@ Giải thích mã code:
     
 
 ### 5. Đổi mật khẩu  (chua test)
+Cấu trúc: $http.account.changePassword(obj,cb);
+    Tham số:
+```TypeScript
+{
+    password_old: String,
+    password: String
+}
+```
 
-    Cấu trúc: $http.account.changePassword(obj,cb);
+Trong đó:     
+- password_old là mật khẩu cũ
+- password là mật khẩu mới
+    
 
 ### 6. Cập nhật thông tin cá nhân 
 
@@ -144,14 +177,44 @@ Giải thích mã code:
 
     Cấu trúc: $http.account.forgotPassword(obj,cb);
 
+    ```TypeScript
+    {
+    phone_number: String,
+    area_code: String
+    }
+    ```
+
 
 ### 8. Thiết lập mật khẩu mới  (chua test)
 
     Cấu trúc: $http.account.setNewPassword(obj,cb);
 
+```TypeScript
+{
+    token: String,
+    password: String
+}
+
+```
 
 
-### 9. Đăng xuất
+### 9. Kiểm tra mã token quên mật khẩu hết hạn hay không (chưa test)
+
+    Cấu trúc: $http.account.checkTokenForgotPassword(obj,cb);
+
+```TypeScript
+{
+    token: String
+}
+```
+Kết quả:
+```TypeScript
+{
+result: boolean,
+code: Number
+}
+```
+### 10. Đăng xuất
 
     Cấu trúc: $http.account.logout(cb);
 
