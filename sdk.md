@@ -24,10 +24,8 @@ Chú ý:  Mã lỗi **400** có thể bao gồm các mã lỗi còn lại nhưng
 | 7 | 204 | Khóa ip public: nghi ngờ tài khoản bị đánh cắp, bị ddos,..| false |
 | 8 | 206 | Khóa tài khoản: Đăng nhập sai nhiều lần theo quy định, | false |
 | 9 | 400 | Không thành công, có kèm nội dung mô tả, trái ngược với mã lỗi 200 | false |
-| 10 | 402 | No internet | false |
-| 11 | 402 | Mất kết nối đường truyền: internet, lan,... | false |
-| 12 | 500 | Lỗi xử lý nghiêm trọng server | false |
-| 13 | 501 | Lỗi kết nối DB | false |
+| 10 | 402 | Mất kết nối đường truyền: internet, lan,... | false |
+| 11 | 500 | Lỗi xử lý nghiêm trọng server | false |
 
 
 
