@@ -9,21 +9,25 @@
     "message": string,
 }
 ```
-Giải thích mã code:
+Giải thích mã code: Hãy quan tới mã code, hạn chế theo tham số result, result trong tương lai sẽ bị hủy bỏ. 
+
+Chú ý:  Mã lỗi **400** có thể bao gồm các mã lỗi còn lại nhưng phải có mô tả nội dung.
 
 | STT | mã code | Mô tả | result |
 |---|---|---|---|
 | 1 | 200 | Thành công | true |
-| 2 | 400 | Lỗi | false |
-| 3 | 500 | Lỗi xử lý nghiêm trọng server | false |
-| 4 | 201 | Validate | false |
-| 5 | 202 | constructor | false |
-| 6 | 203 | token invalid | false |
-| 7 | 205 | token expired | false |
-| 8 | 207 | token no permision | false |
-| 9 | 206 | ip lock | false |
-| 10 | 208 | account lock | false |
-| 11 | 402 | No internet | false |
+| 2 | 201 | Kiểm tra tham số yêu cầu: Bao gồm cấu trúc tham số, tham số giá trị không đúng với quy định,... | false |
+| 3 | 203 | Xác thực: Mã cookies không hợp lệ, không đúng cấu trúc, tự gen ra token,... | false |
+| 4 | 205 | Xác thực: Mã cookies xác thực hết hạn | false |
+| 5 | 207 | Mã cookies hợp lệ, không có quyền truy cập nội dung, dữ liệu | false |
+| 6 | 202 | Khóa thiết bị: nghi ngờ tài khoản bị đánh cắp| false |
+| 7 | 204 | Khóa ip public: nghi ngờ tài khoản bị đánh cắp, bị ddos,..| false |
+| 8 | 206 | Khóa tài khoản: Đăng nhập sai nhiều lần theo quy định, | false |
+| 9 | 400 | Không thành công, có kèm nội dung mô tả, trái ngược với mã lỗi 200 | false |
+| 10 | 402 | No internet | false |
+| 11 | 402 | Mất kết nối đường truyền: internet, lan,... | false |
+| 12 | 500 | Lỗi xử lý nghiêm trọng server | false |
+| 13 | 501 | Lỗi kết nối DB | false |
 
 
 
