@@ -79,9 +79,10 @@ Chú ý:  Mã lỗi **400** có thể bao gồm các mã lỗi còn lại nhưng
     Cấu trúc: $http.account.loginQrcode(obj,cb);
 
 
-### 2. Lấy thông tin qrcode để login (chua test)
+### 2. Lấy thông tin qrcode để login
 
-    Cấu trúc: $http.account.generateQrcode(obj,cb);
+    Cấu trúc: $http.account.generateQrcode(cb);
+    Hàm sẽ trả về dạng {result: boolean, data: {zid: "Mã qrcode"}, code: 200}}
 
 ### 3. Đăng ký
 
@@ -102,14 +103,14 @@ Chú ý:  Mã lỗi **400** có thể bao gồm các mã lỗi còn lại nhưng
     Trả về
 
 ```TypeScript
-{result: boolean, code: Number, data: String}
+{result: boolean, code: Number, data: {zid: <Mã để áp dụng cho Xác thực mã>}}
 ```
 
 Trong đó: 
     - data là giá trị cho tham số **id** của mục **3.2. Gửi lại mã xác thực** 
     - data là giá trị cho tham số **id** của mục **3.3. Xác thực đăng ký**
 
-#### 3.2. Gửi lại mã xác thực  (chua test)
+#### 3.2. Gửi lại mã xác thực
 
     Cấu trúc: $http.account.resendCode(obj,cb);
 
@@ -121,20 +122,20 @@ Trong đó:
 
 Trả về: 
 ```Typescript
-    {result: boolean, code: Number, data: String}
+    {result: boolean, code: Number, data: {zid: "Mã mới để xác thực"}}
 ```
 Trong đó: 
 - data là giá trị cho tham số **id**  cho mục **3.3. Xác thực đăng ký**
 - data là giá trị cho tham số **id**  cho mục **3.2. Gửi lại mã xác thực**
 
-#### 3.3. Xác thực đăng ký
+#### 3.3. Xác thực đăng ký (Kiểm tra mã và thực hiện login)
 
     Cấu trúc: $http.account.verifyCode(obj,cb);
     Tham số Xác thực
- ```TypeScript
+```TypeScript
     {
         id: string,
-        code: string
+        code: string // zid của Gửi lại mã 3.2 hoặc phần đăng ký 3.1
     
     }
 ```  
@@ -179,12 +180,12 @@ Trong đó:
 
     Cấu trúc: $http.account.forgotPassword(obj,cb);
 
-    ```TypeScript
+```TypeScript
     {
     phone_number: String,
     area_code: String
     }
-    ```
+```
 
 
 ### 8. Thiết lập mật khẩu mới  (chua test)
