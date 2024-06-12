@@ -254,11 +254,11 @@ boardClass: "", boardStyleOverrides: {}, messageClass: '', messageStyleOverrides
 - Hiển thị
 
 ```javascript
-board.show({message: Nội dung, closer: "❌", durationSec: 3, closed: false })
+board.show({message: Nội dung, closer: "❌", durationSec: 3, closed: $state(false) })
 
 ```
 
-+ Nếu thiết đặt closed = true board sẽ đóng lại, có thể đứng từ nơi khác để thiết đặt. 
++ Nếu thiết đặt closed = $state(true) board sẽ đóng lại, có thể đứng từ nơi khác để thiết đặt. 
 + Nếu closer thiết đặt thì sẽ hiển thị đấu "❌" => khi click thì  board sẽ đóng lại, 
 + Nếu thiết đặt durationSec thì sau số giây sẽ tự động đóng lạii
 
