@@ -361,7 +361,7 @@ $add(document.body,
  crossStyleOverrides:RecordStyle<string, string | number>|{}
  }
 ```
- ++  Ví dụ: RecordStyle
+* Ví dụ: RecordStyle
 
 ```json
 {
@@ -373,7 +373,7 @@ $add(document.body,
 
 ```
 
-++ Ví dụ State< number >,  State< boolean >
+* Ví dụ:  State< number >,  State< boolean >
  ```javascript
 const zIndex = $state(1);
 const closed = $state(false);
