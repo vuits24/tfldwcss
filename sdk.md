@@ -79,12 +79,30 @@ Chú ý:  Mã lỗi **400** có thể bao gồm các mã lỗi còn lại nhưng
     Cấu trúc: $http.account.loginQrcode(obj,cb);
 
 
-### 2. Lấy thông tin qrcode để login
+### 2. Đăng nhập thông qua qrcode
 
+Quy trình:
+
+#### 2.1 Lẫy mã qrcode, khi hết hạn có thể gọi lại chính nó.
     Cấu trúc: $http.account.generateQrcode(cb);
     Hàm sẽ trả về dạng {result: boolean, data: {zid: "Mã qrcode"}, code: 200}}
+Mã zid sẽ là mã tạo ra qrcode
+
+#### 2.2 Dùng thiết bị mobile để quét mã qrcode (zid 2.1) để kiểm tra lại thông tin
+
+$http.account.checkQrcode({id:String mã qrcode quét được },cb)
+
+Chú ý: cb sẽ trả về thông tin của người dùng, cần xác nhận cụ thể thì làm bước tiếp theo
+
+#### 2.3 Trên thiết bị mobile gọi hàm để thực hiện đăng nhập
+
+
+
+
+
 
 ### 3. Đăng ký
+Quy trình đăng ký: 3.1 -> \[ -> 3.2 (nếu bị hết hạn otp \] -> 3.3 ->
 
 #### 3.1. Gửi thông tin đăng ký
 
@@ -201,23 +219,35 @@ Trong đó:
 ```
 
 
-### 9. Kiểm tra mã token quên mật khẩu hết hạn hay không (chưa test)
+### 9. Duy trình đăng nhập
 
-    Cấu trúc: $http.account.checkTokenForgotPassword(obj,cb);
-
-```TypeScript
-{
-    token: String
-}
+    Cấu trúc: $http.account.keepOnline(cb);
 ```
 Kết quả:
 ```TypeScript
 {
 result: boolean,
-code: Number
+data: {token: string, time_expired: Number (giây)}
 }
 ```
-### 10. Đăng xuất
+### 10. Quên mật khẩu (Quy trình quên mật khẩu)
+
+Quy trình đổi mật khẩu: 10.1 -> 10.2 -> 10.3. Trong trường hợp zid của 10.1 hết hạn thì có thể sử dụng 3.2 để gửi lại mã code.
+
+#### 10.1 Yêu cầu quên mật khẩu
+
+    $http.account.forgotPasswordRequest({area_code: String, phone_number: String}, cb)
+
+#### 10.2 Kiểm tra mã otp 
+
+$http.account.forgotPasswordCheckCode({id: String mã zid của 10.1, code:String lã mã gửi về thiết bị},cb)
+
+
+#### 10.3 Đổi mật khẩu
+
+$http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, password: String là mật khẩu mới},cb)
+
+### 11. Đăng xuất
 
     Cấu trúc: $http.account.logout(cb);
 
