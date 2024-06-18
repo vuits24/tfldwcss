@@ -96,6 +96,16 @@ Chú ý: cb sẽ trả về thông tin của người dùng, cần xác nhận c
 
 #### 2.3 Trên thiết bị mobile gọi hàm để thực hiện đăng nhập
 
+$http.account.loginQrcode({id: String zid của qrcode},console.log)
+
+Kết quả trả về cb trả về token là token của thiết bị web cần đăng nhập
+
+#### 2.4 Trên Trình duyệt luôn gọi định kỳ để kiểm tra Trên thiết bị đã quét và thực hiện login hay chưa
+$http.account.checkScanQrCode({id: String zid của qrcode được tạo},console.log)
+
+Kết quả trả về thông tin token, mã của cookies, có thể bỏ ko không cần lưu, khi gặp trang này phải load lại trang để chuyển về trang chủ.
+
+
 
 
 
@@ -167,7 +177,7 @@ Kết quả khi xác thực thành công, hệ thống sẽ tự động login.
     Cấu trúc: $http.account.profile(cb);
     
 
-### 5. Đổi mật khẩu  (chua test)
+### 5. Đổi mật khẩu 
 Cấu trúc: $http.account.changePassword(obj,cb);
     Tham số:
 ```TypeScript
