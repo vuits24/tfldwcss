@@ -204,7 +204,7 @@ Trong đó:
     
 
 
-### 7. Quên mật khẩu  (chua test)
+### 7. Quên mật khẩu
 
     Cấu trúc: $http.account.forgotPassword(obj,cb);
 
