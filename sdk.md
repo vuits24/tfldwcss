@@ -261,6 +261,10 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
 
     Cấu trúc: $http.account.logout(cb);
 
+### 12. Khác
+### 12.1 Check kiểm tra đăng nhập
+    $http.account.checkAuth(cb)
+
 ## II. Tổ chức
 
    ### 1.Tạo mới tổ chức
