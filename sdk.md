@@ -262,8 +262,16 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
     Cấu trúc: $http.account.logout(cb);
 
 ### 12. Khác
-### 12.1 Check kiểm tra đăng nhập
+#### 12.1 Check kiểm tra đăng nhập
     $http.account.checkAuth(cb)
+
+#### 12.2 Kiểm tra và yêu cấp quyền truy cập thiết bị
+    $http.invokerMobile(args:Array,cb)
+- Trong đó: args:
+  + args = \["permission", "camera"\] => Response: true/false/null.
+  + args = \["permission", "microphone"\] => Response: true/false/null.
+  + args=\["deviceId"\] => Response thông tin thiết bị
+    
 
 ## II. Tổ chức
 
@@ -327,6 +335,7 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
 
  ### 8. Hàm lấy tọa độ theo mã token địa chỉ
   Cấu trúc: $http.cates.geo_detail({place_id: String}, cb);
+  
 
 ### 9. Docs
 #### 9.1. Thêm mới
