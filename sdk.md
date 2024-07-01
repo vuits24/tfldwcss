@@ -216,7 +216,7 @@ Trong đó:
 ```
 
 
-### 8. Thiết lập mật khẩu mới  (chua test)
+### 8. Thiết lập mật khẩu mới
 
     Cấu trúc: $http.account.setNewPassword(obj,cb);
 
