@@ -271,6 +271,10 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
   + args = \["permission", "camera"\] => Response: true/false/null.
   + args = \["permission", "microphone"\] => Response: true/false/null.
   + args=\["deviceId"\] => Response thông tin thiết bị
+ 
+#### 12.3 Check kiểm tra đăng nhập
+    $http.account.checkUser({username:"Bao gồm Mã vùng + số điện thoại (bắt đầu 0)"},cb)
+    
     
 
 ## II. Tổ chức
