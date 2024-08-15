@@ -188,8 +188,9 @@ Cấu trúc: $http.account.checkPassword(obj,cb);
 ```
 
 Trong đó:     
-- password_old là mật khẩu cũ
-- password là mật khẩu mới
+- password là mật khẩu cũ
+
+  
 #### 5.2. Đổi mật khẩu 
 Cấu trúc: $http.account.changePassword(obj,cb);
     Tham số:
