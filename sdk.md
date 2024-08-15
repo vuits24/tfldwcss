@@ -178,6 +178,19 @@ Kết quả khi xác thực thành công, hệ thống sẽ tự động login.
     
 
 ### 5. Đổi mật khẩu 
+#### 5.1. Kiểm tra mật khẩu 
+Cấu trúc: $http.account.checkPassword(obj,cb);
+    Tham số:
+```TypeScript
+{
+    password: String
+}
+```
+
+Trong đó:     
+- password_old là mật khẩu cũ
+- password là mật khẩu mới
+#### 5.2. Đổi mật khẩu 
 Cấu trúc: $http.account.changePassword(obj,cb);
     Tham số:
 ```TypeScript
@@ -189,8 +202,7 @@ Cấu trúc: $http.account.changePassword(obj,cb);
 
 Trong đó:     
 - password_old là mật khẩu cũ
-- password là mật khẩu mới
-    
+- password là mật khẩu mới    
 
 ### 6. Cập nhật thông tin cá nhân 
 
