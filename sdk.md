@@ -196,13 +196,13 @@ Cấu trúc: $http.account.changePassword(obj,cb);
     Tham số:
 ```TypeScript
 {
-    password_old: String,
+    old_password: String,
     password: String
 }
 ```
 
 Trong đó:     
-- password_old là mật khẩu cũ
+- old_password là mật khẩu cũ
 - password là mật khẩu mới    
 
 ### 6. Cập nhật thông tin cá nhân 
