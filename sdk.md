@@ -287,7 +287,14 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
  
 #### 12.3 Check kiểm tra đăng nhập
     $http.account.checkUser({username:"Bao gồm Mã vùng + số điện thoại (bắt đầu 0)"},cb)
-    
+#### 12.4 Lấy thông tin theo tên đăng nhập
+    $http.account.getProfileUser({"area_code: "", "phone_number": "" },cb)
+
+
+- Trong đó:
+
+    + area_code: Mã vùng điện thoại
+    + phone_number: Số điện thoại bao gồm có số 0 ở đầu
     
 
 ## II. Tổ chức
