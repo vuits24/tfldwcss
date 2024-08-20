@@ -361,7 +361,9 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
 
  ### 8. Hàm lấy tọa độ theo mã token địa chỉ
   Cấu trúc: $http.cates.geo_detail({place_id: String}, cb);
-  
+ ### 9. Hàm kích hoạt người tham gia
+  Cấu trúc: $http.business.active({id: "String: Mã tổ chức"},cb)
+
 
 ### 9. Docs
 #### 9.1. Thêm mới
