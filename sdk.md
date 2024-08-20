@@ -289,6 +289,8 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
     $http.account.checkUser({username:"Bao gồm Mã vùng + số điện thoại (bắt đầu 0)"},cb)
 #### 12.4 Lấy thông tin theo tên đăng nhập
     $http.account.getProfileUser({"area_code: "", "phone_number": "" },cb)
+    hoặc
+     $http.business.getProfileUser({"area_code: "", "phone_number": "" },cb)
 
 
 - Trong đó:
