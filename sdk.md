@@ -333,6 +333,9 @@ $http.account.forgotPasswordSetNewPassword({id: String mã zid của 10.2, passw
       $http.business.list({}, console);
 ```
 
+    Chú ý: Thông tin trả về có field: staff_value có 3 giá trị: true: đã kích hoạt tham gia, false: lời mời tham gia
+
+
    ### 4. Hàm lấy thông tin theo mã số thuế
       
       Cấu trúc: $http.business.taxCode(taxString:String, cb:Function);
