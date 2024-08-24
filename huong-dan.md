@@ -26,7 +26,7 @@
  + this<Tên biến>: Thiết lặp thuộc tính <Tên biến> get cho Element.
     
 **4.  Một số hàm cơ bản**
-  + $state: Hàm tạo trạng thái một đối tượng VD: var a = $state(true);
+  + $state: Hàm tạo trạng thái một giá trị cụ kiểu như number, string, boolean, null VD: var a = $state(true);
   + $reactive: Hàm tạo trạng thái cho object VD: var ab = $reactive({a:1,b:2})
   + $stateFields: Trạng thái cho stateFields: VD: var f = $stateFields({a:1,b:2})
   + $derive: ý nghĩa gần effects của react luôn gọi lại khi có sự thay đổi của trạng thái có thể trả về kết quả hoặc không. $derive(()=> {.... }
