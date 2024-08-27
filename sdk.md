@@ -46,7 +46,7 @@ Chú ý:  Mã lỗi **400** có thể bao gồm các mã lỗi còn lại nhưng
    - **Select**: null || {[key:String]: StringFunction|String}
    - **where**: null || {type: String, filterRules: filterItem[]}
      + **type**: Toán tử loại trừ hay gộp có giá trị OR, AND
-     + **filterItem**: {field: String, op: String, value: String|Number|Number} | {type: String, filterRules: filterItem[]}
+     + **filterItem**: {field: String, op: String, value: String|Number|boolean} | {type: String, filterRules: filterItem[]}
          * **field**: Tên trường hoặc Hàm xử lý
          * **op**: Toán tử: >, <, >=, <=,....
          * **value**: Giá trị
