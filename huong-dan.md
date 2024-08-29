@@ -41,7 +41,7 @@
   + $domToTjs: Hàm chuyển Dom sang dạng tjs
   + $defineElement: Hàm định nghĩa thẻ tuỳ chỉnh
   + $Await: Hàm  thẻ load dữ liệu bất đồng bộ
-  + $MessageBoard: class xử lý msg trên màn hình, khởi tạo: const board = new MessageBoard({...thuộc tính})
+  + $MessageBoard: class xử lý msg trên màn hình, khởi tạo: const board = new $MessageBoard({...thuộc tính})
   + $topMostZIndex: Hàm lấy giá trị index => $topMostZIndex()
   + $FloatingWindow: Hàm để tạo cửa sổ, popup,..
 
@@ -241,7 +241,7 @@ styleElement,
 ```
 
 
-6. **$MessageBoard **
+6. ** $MessageBoard **
   
   - Khởi tạo
 
@@ -330,7 +330,7 @@ $add(document.body,
 
 9. **$FloatingWindow** Cửa sổ window
 
-    Cấu trúc: FloatingWindow({...props}, ...children) => Tạo ra cửa sổ
+    Cấu trúc: $FloatingWindow({...props}, ...children) => Tạo ra cửa sổ
 
    Trong đó:
   -  props:
