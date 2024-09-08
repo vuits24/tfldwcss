@@ -6,10 +6,10 @@
 ##### -  Thuộc tính
 + t-size= "small|normal|lager"
 + t-cls="",
-+ t-icon="
-  align:"top|right|bottom|left" default: left,
-  class:"class icon"
- "
++ t-icon="   
+  align:'top|right|bottom|left' default: left,   
+  class:'class icon'   
+  "
 + t-disable="true|false" default: false
 
 ##### -  Sự kiện
@@ -23,11 +23,10 @@
 #### 2.1 t-input
 ##### -  Thuộc tính
 + t-value
-+ t-valid="
-  pattern:'',
-  message:'',
-  align:'top|right|bottom|left',
-  
++ t-valid="  
+  pattern:'',  
+  message:'',  
+  align:'top|right|bottom|left',  
  "
 
 ##### -  Sự kiện
