@@ -4,26 +4,40 @@
 #### 1.1 t-button
 
 ##### -  Thuộc tính
-
++ t-size= "small|normal|lager"
++ t-cls="",
++ t-icon="
+  align:"top|right|bottom|left" default: left,
+  class:"class icon"
+ "
++ t-disable="true|false" default: false
 
 ##### -  Sự kiện
-
++ onclick
 
 
 ##### -  Phương thức hàm
-
++ disable
 
 ## 2. input:
 #### 2.1 t-input
 ##### -  Thuộc tính
-
++ t-value
++ t-valid="
+  pattern:'',
+  message:'',
+  align:'top|right|bottom|left',
+  
+ "
 
 ##### -  Sự kiện
-
-
++ onchange
++ oninput
 
 ##### -  Phương thức hàm
-
++ getValue
++ setValue
+  
 
 #### 2.2 t-checkbox
 ##### -  Thuộc tính
