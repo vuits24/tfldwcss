@@ -57,7 +57,7 @@
 <link rel="stylesheet" href="https://tfldwcss.pages.dev/tfl/tfl.min.css">
 ``` 
 
-## 1. Tạo component svg
+## 3. Tạo component svg
 - t-svg:   
   Thuộc tính:  width, heigth, fill, name   
   Trong đó:  
