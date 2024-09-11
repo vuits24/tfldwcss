@@ -18,10 +18,14 @@
 
 ##### -  Thuộc tính
 + t-size= "small|normal|lager"
-+ t-cls="",
++ t-format="  
+  background: "--<biến màu> hoặc mã màu",
+  border:"--<biến màu> hoặc mã màu",
+  radius:"-- <biến màu> Hoặc mã màu"
+  ",  
 + t-icon="   
   align:'top|right|bottom|left' default: left,   
-  class:'class icon'   
+  icon:'Tên icon'   
   "
 + t-disable="true|false" default: false
 
