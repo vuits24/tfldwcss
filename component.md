@@ -49,6 +49,14 @@
         --fs-s: 13pt;
 
 ```
+
+## 2. Nhúng vào trong thẻ head
+
+```html
+<script src="https://tfldwcss.pages.dev/tfl/tfl.min.js"> </script>
+<link rel="stylesheet" href="https://tfldwcss.pages.dev/tfl/tfl.min.css">
+``` 
+
 ## 1. Tạo component svg
 - t-svg:   
   Thuộc tính:  width, heigth, fill, name   
