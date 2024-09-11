@@ -61,8 +61,8 @@
 - t-svg:   
   Thuộc tính:  width, heigth, fill, name   
   Trong đó:  
-   - name tên svg viết Tương tứng tên của icon, dấu cách sẽ được viết liền.
-   - fill: --<tên biến màu> hoặc mã màu
+   - name tên svg viết Tương tứng tên của icon , dấu cách sẽ được viết liền, không phân biệt hoa thường.
+   - fill: --<tên biến màu> hoặc mã màu   
   Copy SVG từ trang sau: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:loupe:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%235f6368&icon.platform=web   
 
 
