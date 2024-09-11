@@ -18,7 +18,7 @@
 
 ##### -  Thuộc tính
 + t-size= "small|normal|lager"
-+ t-format="  
++ t-f="  
   background: "--<biến màu> hoặc mã màu",   
   border:"--<biến màu> hoặc mã màu",   
   radius:"-- <biến màu> Hoặc mã màu"   
