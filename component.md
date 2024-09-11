@@ -19,9 +19,9 @@
 ##### -  Thuộc tính
 + t-size= "small|normal|lager"
 + t-format="  
-  background: "--<biến màu> hoặc mã màu",
-  border:"--<biến màu> hoặc mã màu",
-  radius:"-- <biến màu> Hoặc mã màu"
+  background: "--<biến màu> hoặc mã màu",   
+  border:"--<biến màu> hoặc mã màu",   
+  radius:"-- <biến màu> Hoặc mã màu"   
   ",  
 + t-icon="   
   align:'top|right|bottom|left' default: left,   
