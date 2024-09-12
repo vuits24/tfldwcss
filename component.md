@@ -110,6 +110,7 @@
 ##### -  Phương thức hàm
 + getValue
 + setValue
++ setError
   
 
 #### 2.2 t-checkbox
