@@ -146,7 +146,7 @@
 ##### -  Phương thức hàm
 + getValue()   
 + setValue(v)
-+ isCheck() => true, false   
++ isChecked() => true, false   
 + setReadOnly(true/false)  
 + setDisable(true/false)   
 
