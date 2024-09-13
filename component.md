@@ -96,8 +96,11 @@
 ## 2. input:
 #### 2.1 t-input
 ##### -  Thuộc tính
-+ t-value
++ t-value   
++ t-disable="true/false"      
++ t-readonly="true/false"      
 + t-valid="   
+  color: --<var> hoặc mã màu, default red   
   isShow: true/false,   
   pattern:'',  
   message:'',  
@@ -111,19 +114,26 @@
 ##### -  Phương thức hàm
 + getValue()
 + setValue(v)
-+ setError(options) =>options: {isShow: true/false, message: String} || null || String   
++ setError(options) =>options: {isShow: true/false, message: String} || null || String
++ setReadOnly(true/false)  
++ setDisable(true/false)   
   
 
 #### 2.2 t-checkbox
-##### -  Thuộc tính
-
+##### -  Thuộc tính   
++ t-value=" "   
++ t-disable= "true/false"      
++ t-class=""   
++ t-toggle="true/false"   
 
 ##### -  Sự kiện
-
++ onchange   
 
 
 ##### -  Phương thức hàm
-
++ getValue()   
++ setValue(v)   
++ setDisable(true/false)   
 
 #### 2.3 t-radio
 ##### -  Thuộc tính
@@ -134,9 +144,14 @@
 
 
 ##### -  Phương thức hàm
++ getValue()
++ setValue(v)
++ setError(options) =>options: {isShow: true/false, message: String} || null || String
++ setReadOnly(true/false)  
++ setDisable(true/false)   
 
-
-#### 2.4 t-toggle
+  
+#### 2.4  t-datetime
 ##### -  Thuộc tính
 
 
@@ -147,7 +162,7 @@
 ##### -  Phương thức hàm
 
 
-#### 2.5  t-datetime
+#### 2.5  t-color
 ##### -  Thuộc tính
 
 
@@ -158,18 +173,7 @@
 ##### -  Phương thức hàm
 
 
-#### 2.6  t-color
-##### -  Thuộc tính
-
-
-##### -  Sự kiện
-
-
-
-##### -  Phương thức hàm
-
-
-#### 2.7 t-input-list
+#### 2.6 t-input-list
 ##### -  Thuộc tính
 
 
