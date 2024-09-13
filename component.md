@@ -97,7 +97,8 @@
 #### 2.1 t-input
 ##### -  Thuộc tính
 + t-value
-+ t-valid="  
++ t-valid="   
+  isShow: true/false,   
   pattern:'',  
   message:'',  
   align:'top|right|bottom|left',  
@@ -108,9 +109,9 @@
 + oninput
 
 ##### -  Phương thức hàm
-+ getValue
-+ setValue
-+ setError
++ getValue()
++ setValue(v)
++ setError(options) =>options: {isShow: true/false, message: String} || null || String   
   
 
 #### 2.2 t-checkbox
