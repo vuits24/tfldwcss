@@ -114,7 +114,6 @@
 ##### -  Phương thức hàm
 + getValue()
 + setValue(v)
-+ setError(options) =>options: {isShow: true/false, message: String} || null || String
 + setReadOnly(true/false)  
 + setDisable(true/false)   
   
@@ -125,32 +124,32 @@
 + t-disable= "true/false"      
 + t-class=""   
 + t-toggle="true/false"   
-
 ##### -  Sự kiện
 + onchange   
 
 
 ##### -  Phương thức hàm
 + getValue()   
-+ setValue(v)   
++ setValue(v)
++ isChecked() => true/false
 + setDisable(true/false)   
 
 #### 2.3 t-radio
 ##### -  Thuộc tính
-
-
++ t-value=" "   
++ t-disable= "true/false"      
++ t-class=""   
 ##### -  Sự kiện
-
++ onchange 
 
 
 ##### -  Phương thức hàm
-+ getValue()
++ getValue()   
 + setValue(v)
-+ setError(options) =>options: {isShow: true/false, message: String} || null || String
++ isCheck() => true, false   
 + setReadOnly(true/false)  
 + setDisable(true/false)   
 
-  
 #### 2.4  t-datetime
 ##### -  Thuộc tính
 
