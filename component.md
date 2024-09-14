@@ -80,8 +80,8 @@
 + t-style="  
   background: "--<biến màu> hoặc mã màu",   
   border:"--<biến màu> hoặc mã màu",   
-  radius:"--biến, px"  
   ",
++ t-radius="true/false",  
 + t-icon="   
   align:'top|right|bottom|left' default: left,   
   icon:'Tên icon'   
@@ -93,7 +93,9 @@
 
 
 ##### -  Phương thức hàm
-+ disable
++ setDisable(true/false)   
++ setIcon(Tên icon)   
++ hideIcon(true/false)   
 
 ## 2. input:
 #### 2.1 t-input
