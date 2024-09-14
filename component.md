@@ -78,8 +78,8 @@
 + t-style="  
   background: "--<biến màu> hoặc mã màu",   
   border:"--<biến màu> hoặc mã màu",   
-  radius:"-- <biến màu> Hoặc mã màu"   
-  ",  
+  radius:"--biến, px"  
+  ",
 + t-icon="   
   align:'top|right|bottom|left' default: left,   
   icon:'Tên icon'   
@@ -98,7 +98,8 @@
 ##### -  Thuộc tính
 + t-value   
 + t-disable="true/false"      
-+ t-readonly="true/false"      
++ t-readonly="true/false"
+ 
 + t-valid="   
   color: --<var> hoặc mã màu, default red   
   isShow: true/false,   
