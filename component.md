@@ -40,13 +40,15 @@
     --c-q-dgreen-rgba: 192, 204, 209, 1 ;
     --c-q-lgreen-rgba: 223, 233, 209, 1;
     --c-q-blue-rgba: 195, 211, 244, 1;
-    --fs-4xl: 48pt;
-        --fs-3xl: 40pt;
-        --fs-2xl: 32pt;
-        --fs-xl: 24pt;
-        --fs-lg: 20pt;
-        --fs-m: 16pt;
-        --fs-s: 13pt;
+    --fs-4xl: 48px;
+   --fs-3xl: 40px;
+   --fs-2xl: 32px;
+   --fs-xl: 24px;
+   --fs-lg: 20px;
+   --fs-m: 16px;
+   --fs-s: 13px;
+
+  
 
 ```
 
