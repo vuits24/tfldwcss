@@ -103,11 +103,14 @@
 + t-value   
 + t-disable="true/false"      
 + t-readonly="true/false"
- 
-+ t-valid="   
++ t-icon="   
+  align:'left|right' default: left,   
+  icon:'Tên icon'   
+  "
++ t-help=""     
++ t-error="   
   color: --<var> hoặc mã màu, default red   
   isShow: true/false,   
-  pattern:'',  
   message:'',  
   align:'top|right|bottom|left',  
  "
@@ -115,12 +118,18 @@
 ##### -  Sự kiện
 + onchange
 + oninput
++ onclickicon   
 
 ##### -  Phương thức hàm
-+ getValue()
-+ setValue(v)
-+ setReadOnly(true/false)  
-+ setDisable(true/false)   
++ value: Lấy hoặc thay đổi giá trị   
++ setType(v) Hàm thay đổi type của input    
++ setReadOnly(true/false)   Hàm thay thuộc tính    
++ setDisable(true/false)  
++ setIcon({align: '',icon: '' })  
++ setError(String)
++ setHelper(String)
+
+  
   
 
 #### 2.2 t-checkbox
