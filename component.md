@@ -168,48 +168,117 @@
 
 #### 2.4  t-datetime
 ##### -  Thuộc tính
-
++t-format="Định dạng ngày tháng"   
++t-options="  
+   months: [],    
+   days: [],    
+   today: '',    
+   clear: '',    
+   close: '',    
+   min: '',    
+   max:'',    
+   preselectedDate: '',    
+   mode: '',    
+   weekStartsMonday: ''    
+   
+"    
 
 ##### -  Sự kiện
-
++onopen    
++onselectyear    
++onselectmonth    
++onchangedate    
++onnavigate    
 
 
 ##### -  Phương thức hàm
++ setFormat(Định dạng) Cấu hình định dạng
++ parse(str Date)
++ Hàm cấu hình chung
+```javascript
+
+setOption({
+	 // Names of months, in order
+  months: \['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'\],
+
+  // Names of days of week, in order
+  days: \['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'\],
+
+  // The text for the button used to set the date to today's date
+  today: 'Today',
+
+  // The text for the button used to clear the input value
+  clear: 'Clear',
+
+  // The text for the button used to close the form
+  close: 'Close',
+
+  // Specifies the minimum date that can be selected
+  min: '10/1/2016',
+
+  // Specifies the maximum date that can be selected
+  max: '10/22/2016',
+
+  // Place datepicker selector on this date if field is still empty
+  preselectedDate: '10/20/2016',
+
+  // There are three modes: modal (the default), permanent and below.
+  // modal makes the date picker show up as a modal.
+  // below makes it show up beneath its input element.
+  // permanent displays the calendar permanently with no input needed
+  mode: 'modal',
+
+  // Whether to use Monday as start of the week
+  weekStartsMonday: false,
+})
+  ````
+open(): opens the modal   
+close(): closes the modal   
+openYears(): shows the modal with the years menu showing   
+openMonths(): shows the modal with the months menu showing   
+setValue(date): sets the date as a string value   
+addMonths(numMonths): Moves the calendar UI forward/backward by numMonths   
+addYears(numYears): Moves the calendar UI forward/backward by numYears   
+goToDate(date): Moves the calendar UI to the specified date   
+destroy(): destroys the date picker and unregisters all events from the input   
 
 
+Tham khảo: https://chrisdavies.github.io/tiny-date-picker/
 #### 2.5  t-color
 ##### -  Thuộc tính
 
++ t-colors="Danh sách color"
 
 ##### -  Sự kiện
-
++ onchange 
 
 
 ##### -  Phương thức hàm
-
++ setColors(\[Danh sách colors\])
 
 #### 2.6 t-input-list
 ##### -  Thuộc tính
-
++ t-values="\[Danh sách giá trị\]"    
 
 ##### -  Sự kiện
-
++ onchange
 
 
 ##### -  Phương thức hàm
-
++ setValues(Danh sách giá tri)    
++ getValues() Trả danh sách giá trị    
 
 ## 3. Select
 
 #### 3.1 t-select
 ##### -  Thuộc tính
 
-
 ##### -  Sự kiện
 
 
 
 ##### -  Phương thức hàm
+
 
 
 #### 3.2 t-selecttree
