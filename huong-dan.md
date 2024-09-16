@@ -23,7 +23,6 @@
     Cấu trúc: x-list="item in data" => item: là giá trị duyệt từng phần tử của biến data, data phải là reactive
  + x-include: Tham chiếu tới tệp module html VD: x-include="https://abc.com/test.html"
  + on<sự kiện>: Sự kiện
- + this<Tên biến>: Thiết lặp thuộc tính <Tên biến> get cho Element.
     
 **4.  Một số hàm cơ bản**
   + $state: Hàm tạo trạng thái một giá trị cụ kiểu như number, string, boolean, null VD: var a = $state(true);
