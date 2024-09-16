@@ -105,29 +105,31 @@
 + t-readonly="true/false"
 + t-icon="   
   align:'left|right' default: left,   
-  icon:'Tên icon'   
+  icon:'Tên icon' Mặc định là trống   
   "
-+ t-help=""     
++ t-help="" Mặc định là trống     
 + t-error="   
-  color: --<var> hoặc mã màu, default red   
-  isShow: true/false,   
-  message:'',  
-  align:'top|right|bottom|left',  
+  color: --<var> hoặc mã màu,    
+  isShow: true/false,   Mặc định là false
+  message:String,   Mặc định là trống   
+  align:'top|bottom',  Mặc định là bottom
  "
 
 ##### -  Sự kiện
-+ onchange
-+ oninput
-+ onclickicon   
++ onchange  
++ oninput  
++ onclick // áp dụng cho icon  
++ onmousedown // áp dụng cho icon   
++ onmouseup  // áp dụng cho icon  
 
 ##### -  Phương thức hàm
 + value: Lấy hoặc thay đổi giá trị   
 + setType(v) Hàm thay đổi type của input    
 + setReadOnly(true/false)   Hàm thay thuộc tính    
 + setDisable(true/false)  
-+ setIcon({align: '',icon: '' })  
-+ setError(String)
-+ setHelper(String)
++ setIcon(String)  
++ setError(String)   
++ setHelper(String)  
 
   
   
