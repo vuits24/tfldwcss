@@ -272,7 +272,14 @@ Tham khảo: https://chrisdavies.github.io/tiny-date-picker/
 
 #### 3.1 t-select
 ##### -  Thuộc tính
-
++ t-value=""
+  
++ t-load="  
+  	method:"",  
+  	url:"",  
+  	body: "",   
+  	result: "" // Định dạng đầu ra    
+ "  
 ##### -  Sự kiện
 
 
