@@ -279,13 +279,21 @@ Tham khảo: https://chrisdavies.github.io/tiny-date-picker/
   	url:"",  
   	body: "",   
   	result: "" // Định dạng đầu ra    
- "  
-##### -  Sự kiện
 
+ "  
+ + t-multiple="true/false"
+ + t-options="  
+    textValue:"",  
+    textField:""  
+  "  
+##### -  Sự kiện
++ onselect  
 
 
 ##### -  Phương thức hàm
-
++ getValue  
++ setValue(object)  
++ setMultiple(true/false)  
 
 
 #### 3.2 t-selecttree
@@ -315,47 +323,60 @@ Tham khảo: https://chrisdavies.github.io/tiny-date-picker/
 
 #### 4.2 t-file
 ##### -  Thuộc tính
-
++t-accept="Chèn các file mở rộng"    
 
 ##### -  Sự kiện
-
-
++ onchange   
 
 ##### -  Phương thức hàm
++ getValue   
 
 
 #### 4.3 t-folder
 ##### -  Thuộc tính
-
+ +t-view="grid|list"  
 
 ##### -  Sự kiện
-
++ onchange  
 
 
 ##### -  Phương thức hàm
-
++ open  
++ close  
 
 #### 4.4 t-pdf
 ##### -  Thuộc tính
-
++ t-visible="true/false"  
 
 ##### -  Sự kiện
-
++ onchange  
 
 
 ##### -  Phương thức hàm
-
++ setUrl(url)  
++ print  
 
 ## 5. Bảng dữ liệu (table)
 #### 5.1 t-page
 ##### -  Thuộc tính
++ t-options="  
+    rows: "Số dòng một trang",  
+    optionRows: [Danh sách các trang được chọn]  
+  "
 
 
 ##### -  Sự kiện
-
++ onchange  
 
 
 ##### -  Phương thức hàm
++ setTotal(n) Cập nhậttổng số dòng tìm được.  
++ setPage(Chọn Số trang)  
++ next() Trang tiếp theo  
++ last() Trang cuối cùng  
++ first() Trang đầu tiên  
++ previous() Trang trước đó  
+
 
 
 #### 5.2 t-datagrid
@@ -372,26 +393,46 @@ Tham khảo: https://chrisdavies.github.io/tiny-date-picker/
 ## 6. Tab  (sự kiện: thêm, xoá, chọn )
 #### 6.1 t-tab
 ##### -  Thuộc tính
-
++ t-select="Vị trí/id",
 
 ##### -  Sự kiện
-
++ onselect
 
 
 ##### -  Phương thức hàm
++ addItem Thêm tab
++ removeItem Xoá tap
 
+#### 6.2 t-tab-item
+##### -  Thuộc tính
++ t-color=""
++ t-icon = "
+	align: 'top|left|bottom|right',
+	name: "",
+  "
+
+##### -  Sự kiện
++ onselect
++ onclick
+
+
+##### -  Phương thức hàm
 
 ## 7. Tooltip
 #### 7.1 t-tooltip
 ##### -  Thuộc tính
-
++ t-options="
+  label: 'Tên tooltip',
+  position: 'top|left|botton|right|auto'
+ "
 
 ##### -  Sự kiện
-
+ + onhover
 
 
 ##### -  Phương thức hàm
-
++ setPosition
++ setLabel
 
 
 ## 8. Thông báo
