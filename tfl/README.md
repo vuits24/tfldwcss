@@ -6,7 +6,14 @@
 - ; Thay cho dấu cách của các giá trị, và selector
 
 ## Diễn giải
--  [<MQ>:]: xs, sm, md, lg, xl, 2xl
+-  **[ < MQ > : ]: xs, sm, md, lg, xl, 2xl**
+	  + xs: screen and (max-width: 575px)
+	  + sm: screen and (min-width: 576px)
+	  + md: screen and (min-width: 768px)
+	  + lg: screen and (min-width: 992px)
+	  + xl: screen and (min-width: 1200px)
+	  + 2xl: screen and (min-width: 1400px)
+
 -  [layer:] !<số> Trong đó số: 1-19, số càng cao sự ưu càng lớn.
 
 -  <Thuộc tính> Bắt buộc, Được định nghĩa theo cấu trúc:    
