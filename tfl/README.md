@@ -24,7 +24,8 @@
 	+  <Viết tắt tên thuộc tính>: là ký  thường được quy ước 
 	+ [Sự ưu tiên>] !
 	+ <Giá trị>    
-		=> <mã màu>    
+		=> #<mã màu>
+		=> --<Tên biến>
 		=> {<Biểu thức>}    
 		=> Ký tự viết tắt của giá trị hoặc đầy đủ (Phải tên không có ký tự -, dấu cách).    
 		Ví dụ:    
