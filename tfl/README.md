@@ -7,12 +7,12 @@
 
 ## Diễn giải
 -  **[ < MQ > : ]: xs, sm, md, lg, xl, 2xl**
-	  + xs: screen and (max-width: 575px)
-	  + sm: screen and (min-width: 576px)
-	  + md: screen and (min-width: 768px)
-	  + lg: screen and (min-width: 992px)
-	  + xl: screen and (min-width: 1200px)
-	  + 2xl: screen and (min-width: 1400px)
+	  + xs: max-width: 575px
+	  + sm: min-width: 576px
+	  + md: min-width: 768px
+	  + lg: min-width: 992px
+	  + xl: min-width: 1200px
+	  + 2xl: min-width: 1400px
 
 -  [layer:] !<số> Trong đó số: 1-19, số càng cao sự ưu càng lớn.
 
