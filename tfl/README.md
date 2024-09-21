@@ -27,7 +27,7 @@
 		=> #<mã màu>   
 		=> --<Tên biến>   
 		=> {<Biểu thức>}    
-		=> Ký tự viết tắt của giá trị hoặc đầy đủ (Phải tên không có ký tự -, dấu cách).    
+		=> Chuỗi ký tự (Có một ký tự đầu Viết Hoa), đại diện cho từ tắt của giá trị hoặc đầy đủ (Phải tên không có ký tự -, dấu cách).      
 		Ví dụ:    
 		 - dF => d: display, F: flex => dF {display: flex;}
 		 - d!F => d: display, F: flex, ! ưu tiên => d!F {display: flex!importan;}
