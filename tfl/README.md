@@ -16,11 +16,11 @@
     ```
 	+  <Viết tắt tên thuộc tính>: là ký  thường được quy ước 
 	+ [Sự ưu tiên>] !
-	+ <Giá trị>
-		=> <mã màu>
-		=> {<Biểu thức>}
-		=> Ký tự viết tắt của giá trị hoặc đầy đủ (Phải tên không có ký tự -, dấu cách).
-		Ví dụ: 
+	+ <Giá trị>    
+		=> <mã màu>    
+		=> {<Biểu thức>}    
+		=> Ký tự viết tắt của giá trị hoặc đầy đủ (Phải tên không có ký tự -, dấu cách).    
+		Ví dụ:    
 		 - dF => d: display, F: flex => dF {display: flex;}
 		 - d!F => d: display, F: flex, ! ưu tiên => d!F {display: flex!importan;}
 		 - dFlex => d: display, Flex : flex => dFlex{display: flex}
