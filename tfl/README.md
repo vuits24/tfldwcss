@@ -14,7 +14,7 @@
 	  + xl: min-width: 1200px
 	  + 2xl: min-width: 1400px
 
--  [layer:] !<số> Trong đó số: 1-19, số càng cao sự ưu càng lớn.
+-  [layer:] <số> Trong đó số: 1-19, số càng cao sự ưu càng lớn. VD: 1c#000 => layer = 1
 
 -  <Thuộc tính> Bắt buộc, Được định nghĩa theo cấu trúc:    
 
@@ -2147,42 +2147,43 @@
         
 
 ## 4. Ví dụ cụ thể
-### - xs:!1dF
+### - xs:1dF
 + **Phân tích**
-	MQ: xs =>  @media screen and (max-width: 575px)
-	Layer: !1, => @layer l1 
-	Thuộc tính: dF => display: flex;
-+ **Build thành:** 
+	MQ: xs =>  @media screen and (max-width: 575px)   
+	Layer: 1, => @layer l1 
+	Thuộc tính: dF => display: flex;   
++ **Build thành:**
+```css
 	 @media screen and (max-width: 575px) {
 		@play l1 {
-		xs:!1dF {display: flex;} 
-		}
-	}
-
-
-### - xs:!1cRed:hover;>div
-
-+ ***Phân tích**
-	MQ: xs =>  screen and (max-width: 575px)
-	Layer: !1 => layer l1
-	Thuộc tính:  cRed => color: red;
-	Selector: :hover;>div => :hover > div, Trong đó ; là dấu cách.
-
-+ **Build thành**
-```css
-@media screen and (max-width: 575px) {
-		@play l1 {
-		<Thuộc tính>:hover >div {color: red;} 
+		xs:1dF {display: flex;} 
 		}
 	}
 ```
-### - xs:!1cRed&bgGreen:hover;>div
+
+### - xs:1cRed:hover;>div
+
++ ***Phân tích**
+	MQ: xs =>  screen and (max-width: 575px)    
+	Layer: 1 => layer l1    
+	Thuộc tính:  cRed => color: red;   
+	Selector: :hover;>div => :hover > div, Trong đó ; là dấu cách.  
+
++ **Build thành**  
+```css
+@media screen and (max-width: 575px) {
+		@play l1 {
+		<Thuộc tính>:hover >div {color: red;}   
+		}
+	}
+```
+### - xs:1cRed&bgGreen:hover;>div   
 
 + **Phân tích**
-	MQ: xs =>  screen and (max-width: 575px)
-	Layer: !1 => layer l1
-	Thuộc tính:  cRed&bgGreen => color: red; background: green; 
-	Selector: :hover;>div => :hover > div, Trong đó ; là dấu cách.
+	MQ: xs =>  screen and (max-width: 575px)     
+	Layer: 1 => layer l1    
+	Thuộc tính:  cRed&bgGreen => color: red; background: green;   
+	Selector: :hover;>div => :hover > div, Trong đó ; là dấu cách.   
 
 + **Build thành**
 ```css
