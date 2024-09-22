@@ -33,7 +33,57 @@
 		 - d!F => d: display, F: flex, ! ưu tiên => d!F {display: flex!importan;}
 		 - dFlex => d: display, Flex : flex => dFlex{display: flex}
 
-## 2. Định nghĩa các thuộc tính
+## 2. Các biến màu
+
+```css
+   --c-black: #303030;
+    --c-dgreen: #043C39;
+    --c-lgreen: #9BCE39;
+    --c-blue: #1062E5;
+    --c-yellow: #FBBC05;
+    --c-red: #EA4335;
+    --c-white: #FFFFFF;
+    --c-s-black: #565656;
+    --c-s-dgreen: #33605E;
+    --c-s-lgreen: #BDDB84;
+    --c-s-blue: #3C7EE8;
+    --c-t-black: #1A1A1A;
+    --c-t-dgreen: #002A28;
+    --c-t-lgreen: #7DBE01;
+    --c-t-blue: #004BC2;
+    --c-q-black: #C9C9CF;
+    --c-q-dgreen: #C0CCD1;
+    --c-q-lgreen: #DFE9D1;
+    --c-q-blue: #C3D3F4;
+    --c-black-rgba: 48, 48, 48, 1;
+    --c-dgreen-rgba: 4, 60, 57, 1;
+    --c-lgreen-rgba: 155, 206, 57, 1;
+    --c-blue-rgba: 16, 98, 229, 1;
+    --c-yellow-rgba: 251, 188, 5, 1;
+    --c-red-rgba: 234, 67, 53, 1;
+    --c-white-rgba: 255, 255, 255, 1;
+    --c-s-black-rgba: 86, 86, 86, 1;
+    --c-s-dgreen-rgba: 51, 96, 94, 1;
+    --c-s-lgreen-rgba: 189, 219, 132, 1;
+    --c-s-blue-rgba: 60, 126, 232, 1;
+    --c-t-black-rgba: 26, 26, 26, 1;
+    --c-t-dgreen-rgba: 0, 42, 40, 1;
+    --c-t-lgreen-rgba: 125, 190, 1, 1;
+    --c-t-blue-rgba: 0, 75, 194, 1;
+    --c-q-black-rgba: 201, 201, 207, 1;
+    --c-q-dgreen-rgba: 192, 204, 209, 1 ;
+    --c-q-lgreen-rgba: 223, 233, 209, 1;
+    --c-q-blue-rgba: 195, 211, 244, 1;
+    --fs-4xl: 48px;
+   --fs-3xl: 40px;
+   --fs-2xl: 32px;
+   --fs-xl: 24px;
+   --fs-lg: 20px;
+   --fs-m: 16px;
+   --fs-s: 13px;
+
+```
+## 3. Định nghĩa các thuộc tính
 - **wlc** Viết tắt cho thuộc tính: **-webkit-line-clamp**  một số class mặc định:
 
 ```css
@@ -2096,7 +2146,7 @@
 ```
         
 
-## 3. Ví dụ cụ thể
+## 4. Ví dụ cụ thể
 ### - xs:!1dF
 + **Phân tích**
 	MQ: xs =>  @media screen and (max-width: 575px)
