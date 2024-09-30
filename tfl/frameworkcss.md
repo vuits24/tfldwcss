@@ -1,7 +1,3 @@
-# Nhúng code tham khảo
-[Tham khảo trên component](https://github.com/vuits24/tfldwcss/blob/main/component.md)
-
-
 
 # Cấu trúc class theo framework
 ```text
