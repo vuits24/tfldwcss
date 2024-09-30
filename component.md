@@ -56,7 +56,6 @@
 
 ```html
 <script src="https://tfldwcss.pages.dev/tfl/tfl.min.js"> </script>
-<link rel="stylesheet" href="https://tfldwcss.pages.dev/tfl/tfl.min.css">
 ``` 
 
 ## 3. Tạo component svg
