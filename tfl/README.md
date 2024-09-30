@@ -8,18 +8,18 @@
 
 ## 2.Một số tính năng trên framework js
 
-### **1**. Truyền tham số vào thuộc tính**
+### **1**. Truyền tham số vào thuộc tính
 
    {{ Hàm, biểu thức, biến }}
    Ví dụ: class="{{()=>className}}" hoặc onclick="{{()=>data.val+=1}}"
    
-### **2**. Truyền tham số vào nội dung**
+### **2**. Truyền tham số vào nội dung
 
    {{ Hàm, biểu thức, biến }}
    Ví dụ: <div> Phép cộng: {{ ()=> a + b }} </div>
 
    
-### **3**. Khai báo thuộct tính trên thẻ**
+### **3**. Khai báo thuộct tính trên thẻ
   + **x-app**: Khai báo ứng dụng ví dụ: <div x-app> </body> => Hệ thống sẽ render từ div có thuộc tính x-app
   + x-script: Bổ sung kịch bản khi các đối tượng trên chưa đáp ứng được
   + x-list: Áp dụng đối với biến <varname>  thuộc  x-reactive.
