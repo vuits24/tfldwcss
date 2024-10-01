@@ -4,7 +4,10 @@
 ```html
  <script src="https://tfldwcss.pages.dev/tfl/tfl.min.js"></script>
 
+
+
 ```
+**Chú ý**: Nếu nhúng script có thiết đặt là modulex => có kiểu là module, text/javascriptx => text/javascript.
 
 ## 2.Một số tính năng trên framework js
 
