@@ -7,7 +7,7 @@
 
 
 ```
-**Chú ý**: Nếu nhúng script có thiết đặt là modulex => có kiểu là module, text/javascriptx => text/javascript.
+**Chú ý**: Nếu nhúng script thì nên thiết đặt type là modulex => có kiểu là module, text/javascriptx => text/javascript.
 
 ## 2.Một số tính năng trên framework js
 
