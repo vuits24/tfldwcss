@@ -112,7 +112,7 @@ Kết quả trả về thông tin token, mã của cookies, có thể bỏ ko kh
 
 
 ### 3. Đăng ký
-Quy trình đăng ký: 3.1 -> \[ -> 3.2 (nếu bị hết hạn otp \] -> 3.3 ->
+Quy trình đăng ký: 3.1 -> \[ -> 3.2 (nếu bị hết hạn mã xác thực \] -> 3.3 ->
 
 #### 3.1. Gửi thông tin đăng ký
 
