@@ -1,3 +1,6 @@
+# Cài đặt
+Nhúng cặp thẻ sau vào trong thẻ head của bạn
+ <script src="https://tfldwcss.pages.dev/tfl/tfl.min.js"></script>
 
 # Cấu trúc class theo framework
 ```text
